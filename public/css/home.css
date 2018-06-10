@@ -3,3 +3,9 @@
 .home-heading {
   color: limegreen;
 }
+
+.home-view--about {
+  .section-container {
+    padding: 80px 0 60px;
+  }
+}

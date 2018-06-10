@@ -48,6 +48,18 @@ function configFactory() {
         ifDev('webpack-hot-middleware/client'),
         path.resolve(appRootDir.get(), './public/js/about')
       ]),
+      products: removeEmpty([
+        ifDev('webpack-hot-middleware/client'),
+        path.resolve(appRootDir.get(), './public/js/products')
+      ]),
+      responsibilities: removeEmpty([
+        ifDev('webpack-hot-middleware/client'),
+        path.resolve(appRootDir.get(), './public/js/responsibilities')
+      ]),
+      contact: removeEmpty([
+        ifDev('webpack-hot-middleware/client'),
+        path.resolve(appRootDir.get(), './public/js/contact')
+      ]),
     },
 
     output: {

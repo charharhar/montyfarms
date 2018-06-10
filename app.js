@@ -28,6 +28,9 @@ dotenv.load({ path: '.env.example' });
  */
 const homeController = require('./controllers/home');
 const aboutController = require('./controllers/about');
+const productsController = require('./controllers/products');
+const responsibilitiesController = require('./controllers/responsibilities');
+const contactController = require('./controllers/contact');
 
 /**
  * Create Express server.
@@ -82,6 +85,18 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   aboutController.index(req, res, assetsMap);
+});
+
+app.get('/products', (req, res) => {
+  productsController.index(req, res, assetsMap);
+});
+
+app.get('/responsibilities', (req, res) => {
+  responsibilitiesController.index(req, res, assetsMap);
+});
+
+app.get('/contact', (req, res) => {
+  contactController.index(req, res, assetsMap);
 });
 
 /**

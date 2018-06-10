@@ -1,8 +1,13 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css);
 
-$font-stack: "Arial", sans-serif;
+$futura-bold: "Arial", sans-serif;
+$futura-med: "Arial", sans-serif;
+$avenir-book: "Arial", sans-serif;
 $main-white: #ffffff;
-$main-black: #222;
+$main-black: #000;
+$main-red: #ed3424;
+$main-yellow: #fbb621;
+$main-green: #579843;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -30,7 +35,7 @@ time, mark, audio, video {
 
 html, body {
   width: 100%;
-  font-family: $font-stack;
+  font-family: $avenir-book;
   font-weight: 400;
   color: $main-black;
   overflow-x: hidden;
@@ -130,6 +135,47 @@ p {
   line-height: 150%;
 }
 
+.section-heading {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  .heading-container {
+    position: relative;
+
+    & > * {
+      display: inline-block;
+    }
+
+    h1 {
+      font-family: $futura-med;
+
+      &.white-heading {
+        color: $main-white;
+        font-size: 36px;
+      }
+
+      &.sub-heading {
+        color: $main-green;
+        font-size: 24px;
+      }
+    }
+
+    figure {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 25px;
+      transform: translateY(-100%);
+    }
+  }
+
+  p.heading-blurb {
+    text-align: center;
+  }
+}
+
 /**
  * Button styles
  */
@@ -139,15 +185,15 @@ a.button {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  padding: 15px 20px;
+  padding: 8px 15px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 25px;
   transition: .2s all ease;
 
-  &.button-grey {
-    background-color: #eee;
-    color: $main-black;
-    border-color: #eee;
+  &.button-yellow {
+    background-color: $main-yellow;
+    color: $main-white;
+    border-color: $main-yellow;
   }
 }
 
@@ -156,8 +202,93 @@ a.button {
  */
 
 figure {
+  vertical-align: bottom;
   img {
     width: 100%;
+  }
+}
+
+/**
+ * Navigation Styles
+ */
+nav.main-navigation {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: '';
+    margin-right: auto;
+  }
+
+  .navigation-logo-wrapper {
+    margin: 0 15px;
+
+    figure.heading-logo-image {
+      max-width: 50px;
+    }
+  }
+
+  .navigation-list-wrapper {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    padding-top: 20px;
+
+    &:before {
+      content: '';
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      background-color: $main-yellow;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      li {
+        position: relative;
+        text-align: center;
+        margin: 0 12px;
+
+        a {
+          color: $main-white;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 16px;
+          text-decoration: none;
+          letter-spacing: 1px;
+          transition: .2s all ease;
+
+          &.navLink {
+            &:hover {
+              color: $main-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  nav.main-navigation {
+    &:before {
+      display: none;
+    }
   }
 }
 
@@ -166,4 +297,63 @@ figure {
  */
 section.section {
   position: relative;
+}
+
+section.section-hero {
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+
+  figure.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .4);
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .hero-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .section-heading {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heading-container {
+      margin-bottom: 25px;
+
+      h1.hero-heading {
+        padding-bottom: 8px;
+        border-bottom: 3px solid #fff;
+      }
+    }
+
+    p.hero-blurb {
+      max-width: 420px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+  }
 }
