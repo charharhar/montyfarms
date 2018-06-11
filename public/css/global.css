@@ -287,12 +287,7 @@ nav.main-navigation {
 
         a {
           color: $main-white;
-          font-weight: bold;
-          text-transform: uppercase;
           font-size: 16px;
-          text-decoration: none;
-          letter-spacing: 1px;
-          transition: .2s all ease;
 
           &.navLink {
             &:hover {
@@ -303,6 +298,15 @@ nav.main-navigation {
       }
     }
   }
+}
+
+a.navLink {
+  font-family: $futura-bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .2s all ease;
 }
 
 @media (max-width: 1440px) {
@@ -408,6 +412,58 @@ section.section-hero {
     p.hero-blurb {
       color: #fff;
       margin-bottom: 20px;
+    }
+  }
+}
+
+/**
+ * Footer Styles
+ */
+footer.section-footer {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  padding: 10px 15px;
+
+  figure.footer-mf-logo,
+  figure.footer-mg-logo {
+    width: 50px;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .footer-nav-wrapper {
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li {
+          position: relative;
+          text-align: center;
+          margin: 0 12px;
+
+          a {
+            color: $main-black;
+            font-size: 16px;
+
+            &.navLink {
+              &:hover {
+              }
+            }
+          }
+        }
+      }
+    }
+
+    p.footerCopyright {
+      font-size: 12px;
+      text-transform: uppercase;
+      text-align: center;
     }
   }
 }

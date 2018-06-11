@@ -34,6 +34,10 @@ export function getDistanceFromLeft(el) {
   return (rect.left + (window.pageXOffset || docEl.scrollLeft || 0))
 }
 
+export function footerCopyrightYear(target) {
+  target.innerHTML = new Date().getFullYear();
+}
+
 export function scrollTop() {
   return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
