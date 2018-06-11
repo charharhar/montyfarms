@@ -1,5 +1,21 @@
 @import 'global';
 
-.about-heading {
-  color: lightblue;
+section.section {
+
+  .section-fixed-image {
+    height: 100vh;
+    height: calc(100vh - 340px);
+    min-height: 568px;
+    &.parallax-community {
+      background-image: url(/images/responsibilities/community-hero.png);
+    }
+
+    &.parallax-employees {
+      background-image: url(/images/responsibilities/employees-hero.png);
+    }
+
+    &.parallax-environment {
+      background-image: url(/images/responsibilities/environment-hero.png);
+    }
+  }
 }
