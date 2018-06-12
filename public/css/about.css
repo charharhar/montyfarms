@@ -170,7 +170,7 @@ section.section.about-view--friends {
 
     .friends-logo {
       display: flex;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       flex: 0 1 17%;
 
       &:nth-of-type(5n) {

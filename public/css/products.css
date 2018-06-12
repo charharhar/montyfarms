@@ -1,5 +1,9 @@
 @import 'global';
 
-.about-heading {
-  color: lightblue;
+section.section-hero {
+  .hero-background-container {
+    .hero-background-image {
+      background-image: url(/images/products/product-hero.png);
+    }
+  }
 }

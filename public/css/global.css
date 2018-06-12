@@ -195,6 +195,10 @@ p {
   p.heading-blurb {
     text-align: center;
     max-width: 580px;
+
+    &.short {
+      max-width: 380px;
+    }
   }
 }
 
@@ -202,20 +206,39 @@ p {
  * Button styles
  */
 
+input[type="submit"],
 a.button {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  padding: 8px 15px;
-  border: 1px solid transparent;
+  padding: 6px 20px;
+  border: 3px solid transparent;
+  min-width: 120px;
   border-radius: 25px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: $futura-med;
   transition: .2s all ease;
 
   &.button-yellow {
     background-color: $main-yellow;
     color: $main-white;
     border-color: $main-yellow;
+
+    &:hover {
+      color: $main-black;
+    }
+  }
+
+  &.button-red-ghost {
+    color: $main-red;
+    border: 3px solid $main-red;
+
+    &:hover {
+      color: $main-white;
+      background-color: $main-red;
+    }
   }
 }
 
@@ -328,6 +351,7 @@ section.section {
     position: relative;
     z-index: 10;
     width: 100%;
+    padding: 15px;
   }
 
   .heading-block {
