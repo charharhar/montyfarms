@@ -324,6 +324,12 @@ a.navLink {
 section.section {
   position: relative;
 
+  .section-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+
   .heading-block {
     display: flex;
     align-items: center;
@@ -349,14 +355,6 @@ section.section {
       }
     }
   }
-}
-
-section.section-hero {
-  min-height: 785px;
-  height: 100vh;
-  padding-top: 100px;
-  display: flex;
-  overflow: hidden;
 
   .hero-background-container {
     position: absolute;
@@ -388,6 +386,14 @@ section.section-hero {
       }
     }
   }
+}
+
+section.section-hero {
+  min-height: 785px;
+  height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  overflow: hidden;
 
   .hero-container {
     position: relative;

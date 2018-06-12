@@ -8,6 +8,110 @@ section.section-hero {
   }
 }
 
+section.section.about-view--core {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+  background-color: $main-white;
+}
+
+section.section.about-view--values {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 720px;
+  background-color: $main-green;
+
+  p.hero-blurb {
+    color: $main-white;
+    max-width: 320px;
+  }
+
+  .values-slider {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .values-container {
+    display: flex;
+    flex-flow: column;
+
+    figure {
+      width: 50px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      color: $main-white;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: $futura-med;
+    }
+  }
+}
+
+section.section.about-view--people {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 890px;
+  background-color: #fff;
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .hero-background-container {
+    z-index: 9;
+
+    .hero-background-image {
+      &:before {
+        background-color: rgba(255, 255, 255, .7);
+      }
+      filter: blur(3px);
+      background-image: url(/images/about/bio/field.png);
+    }
+  }
+
+  .people-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+
+    .people-banner {
+      max-width: 250px;
+      margin: 0 30px;
+      background-color: darkgreen;
+
+      .people-content {
+        padding: 15px;
+      }
+
+      h3 {
+        font-family: $futura-med;
+        text-align: center;
+        color: orange;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      p {
+        text-align: center;
+        font-size: 11px;
+        color: $main-white;
+      }
+    }
+  }
+}
+
 section.section.about-view--certif {
   display: flex;
   flex-flow: column;
