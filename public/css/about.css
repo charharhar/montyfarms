@@ -3,3 +3,77 @@
 .about-heading {
   color: lightblue;
 }
+
+section.section.about-view--certif {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 565px;
+  background-color: #fff;
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .certif-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    max-width: 75%;
+    margin: 0 auto;
+
+    .certif-icon {
+      display: flex;
+      margin-bottom: 15px;
+      flex: 0 1 17%;
+
+      &:nth-of-type(5n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+section.section.about-view--friends {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 765px;
+  background-color: #eee;
+
+  .section-container {
+    padding-bottom: 120px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .friends-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    max-width: 75%;
+    margin: 0 auto;
+
+    .friends-logo {
+      display: flex;
+      margin-bottom: 15px;
+      flex: 0 1 17%;
+
+      &:nth-of-type(5n) {
+        margin-right: 0;
+      }
+
+      img {
+        margin: 0 auto;
+        max-width: 105px;
+        max-height: 50px;
+      }
+    }
+  }
+}

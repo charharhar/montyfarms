@@ -144,7 +144,7 @@ h2 {
 
 p {
   font-family: $avenir-book;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
@@ -156,7 +156,7 @@ p {
 
   .heading-container {
     position: relative;
-    margin: 0 30px;
+    margin: 15px 30px;
 
     &.white-heading {
       color: $main-white;
@@ -193,7 +193,7 @@ p {
 
   p.heading-blurb {
     text-align: center;
-    max-width: 665px;
+    max-width: 580px;
   }
 }
 
@@ -400,13 +400,12 @@ section.section-hero {
       justify-content: center;
     }
 
-    .heading-container {
+    .heading-underline {
+      display: flex;
+      justify-content: center;
+      width: 420px;
+      border-bottom: 2px solid #fff;
       margin-bottom: 25px;
-
-      h1.hero-heading {
-        padding-bottom: 8px;
-        border-bottom: 3px solid #fff;
-      }
     }
 
     p.hero-blurb {
@@ -421,19 +420,25 @@ section.section-hero {
  */
 footer.section-footer {
   display: flex;
-  height: 90px;
+  height: 110px;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 15px;
 
   figure.footer-mf-logo,
   figure.footer-mg-logo {
     width: 50px;
   }
 
+  .footer-left,
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+
   .footer-center {
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     .footer-nav-wrapper {
