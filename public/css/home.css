@@ -28,6 +28,16 @@ section.home-view--sneak {
   max-height: 100vh;
   min-height: 830px;
 
+  .sneak-play-container {
+    position: relative;
+    border: 4px solid $main-white;
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+    margin: 20px auto 0;
+    cursor: pointer;
+  }
+
   .section-container {
     position: absolute;
     top: 50%;
@@ -56,7 +66,7 @@ section.home-view--findus {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
 
     figure {
