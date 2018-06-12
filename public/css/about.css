@@ -1,7 +1,11 @@
 @import 'global';
 
-.about-heading {
-  color: lightblue;
+section.section-hero {
+  .hero-background-container {
+    .hero-background-image {
+      background-image: url(/images/about/about-hero.png);
+    }
+  }
 }
 
 section.section.about-view--certif {

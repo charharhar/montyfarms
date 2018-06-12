@@ -133,6 +133,7 @@ h1 {
   font-size: 46px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -357,47 +358,54 @@ section.section-hero {
   display: flex;
   overflow: hidden;
 
-  figure.hero-background-image {
+  .hero-background-container {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     z-index: -1;
 
-    &:before {
-      content: '';
+    .hero-background-image {
       position: absolute;
       top: 0;
       left: 0;
+      height: 100%;
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, .4);
-    }
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: auto;
-      height: 100%;
       z-index: -1;
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);
+      }
     }
   }
 
   .hero-container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
 
     .section-heading {
       display: flex;
       flex-flow: column;
       align-items: center;
       justify-content: center;
+
+      &.hero-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .heading-underline {

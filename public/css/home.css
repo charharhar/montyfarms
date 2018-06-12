@@ -1,7 +1,11 @@
 @import 'global';
 
-.home-heading {
-  color: limegreen;
+section.section-hero {
+  .hero-background-container {
+    .hero-background-image {
+      background-image: url(/images/home/home-hero.png);
+    }
+  }
 }
 
 .home-view--about {
