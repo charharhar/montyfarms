@@ -46,6 +46,7 @@
     "build": "rimraf build;cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "start": "cross-env NODE_ENV=production babel-node app.js",
     "tunnel:build": "rimraf build;cross-env NODE_ENV=production ENABLE_TUNNEL=true webpack --config webpack/webpack.config.js",
-    "tunnel:start": "cross-env NODE_NEV=production ENABLE_TUNNEL=true babel-node app.js"
+    "tunnel:start": "cross-env NODE_NEV=production ENABLE_TUNNEL=true babel-node app.js",
+    "heroku:start": "yarn build; yarn start"
   }
 }
