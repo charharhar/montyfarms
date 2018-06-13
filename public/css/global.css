@@ -138,9 +138,17 @@ h1 {
 
 h2 {
   font-family: $futura-med;
-  font-size: 36px;
+  font-size: 32px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+h3 {
+  font-family: $futura-med;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $main-red;
 }
 
 p {
@@ -159,6 +167,18 @@ p {
     position: relative;
     margin: 15px 30px;
 
+    &.small-leaf {
+      &.white-heading,
+      &.green-heading {
+        &:before {
+          height: 15px;
+          width: 15px;
+          right: -15px;
+          top: -10px;
+        }
+      }
+    }
+
     &.white-heading {
       color: $main-white;
 
@@ -172,6 +192,7 @@ p {
         background-image: url(/images/icons/whiteleaf-icon.png);
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
       }
     }
 
@@ -188,6 +209,7 @@ p {
         background-image: url(/images/icons/greenleaf-icon.png);
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }

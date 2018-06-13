@@ -16,12 +16,58 @@ section.section-hero {
 
 section.home-view--about {
   .section-container {
-    padding: 80px 0 60px;
+    padding-bottom: 0;
   }
-}
 
-section.home-view--products {
+  .products-container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
 
+    .product-content {
+      width: 45%;
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      h3 {
+        position: relative;
+        font-size: 22px;
+        text-align: center;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          width: 10px;
+          height: 2px;
+          background-color: $main-black;
+          transform: translateX(-50%);
+        }
+      }
+
+      .products {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+
+        .product {
+          width: 30%;
+          padding-top: 25px;
+          min-height: 150px;
+        }
+      }
+    }
+  }
+
+  .products-seemore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  }
 }
 
 section.home-view--sneak {

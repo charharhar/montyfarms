@@ -135,7 +135,6 @@ section.section.about-view--certif {
     .certif-icon {
       display: flex;
       margin-bottom: 15px;
-      flex: 0 1 17%;
 
       &:nth-of-type(5n) {
         margin-right: 0;
