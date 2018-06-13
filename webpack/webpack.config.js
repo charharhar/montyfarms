@@ -64,8 +64,8 @@ function configFactory() {
 
     output: {
       path: path.resolve(appRootDir.get(), './build/'),
-      filename: ifProd('[name]-[chunkhash].js', '[name].js'),
-      chunkFilename: '[name]-[chunkhash].js',
+      filename: ifProd('[name].js', '[name].js'),
+      chunkFilename: '[name].js',
       publicPath: ifDev('http://localhost:3000/build/', '/'),
     },
 
@@ -107,7 +107,7 @@ function configFactory() {
 
       ifProd(() =>
         new ExtractTextPlugin({
-          filename: '[name]-[chunkhash].css',
+          filename: '[name].css',
           allChunks: true,
         })
       ),
