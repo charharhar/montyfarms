@@ -7,6 +7,22 @@ export function hotReload() {
   return (process.env.NODE_ENV === 'development') && module.hot && module.hot.accept();
 }
 
+export function mobileNavHandler(toggle, mobileNav) {
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if (this.classList.contains('mobile-active') === true) {
+      this.classList.remove('mobile-active')
+      mobileNav.classList.remove('mobile-active')
+    } else {
+      this.classList.add('mobile-active');
+      mobileNav.classList.add('mobile-active');
+    }
+
+  });
+}
+
 export function removeAllChildren(parent) {
   while (parent.hasChildNodes()) {
     parent.removeChild(parent.lastChild);

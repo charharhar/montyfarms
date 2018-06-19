@@ -1,10 +1,23 @@
 
 import '../css/responsibilities.css';
-import { hotReload, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  mobileNavHandler,
+  footerCopyrightYear,
+} from './util.js'
 
-window.addEventListener('load', function(e) {
-  console.log('--> Application started  |  Current route: /responsibilities')
-})
+/**
+ * DYNAMIC FOOTER YEAR
+ */
+const footerCopy = document.querySelector('#footerCopy');
+footerCopyrightYear(footerCopy);
 
-footerCopyrightYear(document.querySelector('#footerCopy'))
+/**
+ * MOBILE NAV HANDLER
+ */
+const hamburger = document.querySelector('.hamburger');
+const mobileNavList = document.querySelector('.mobile-nav-list');
+
+mobileNavHandler(hamburger, mobileNavList);
+
 hotReload();

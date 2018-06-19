@@ -88,9 +88,33 @@ section.section.about-view--people {
     width: 75%;
 
     .people-banner {
+      position: relative;
       max-width: 250px;
-      margin: 0 30px;
-      background-color: darkgreen;
+      margin: 17px 30px;
+      background-color: #173633;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        background-image: url(/images/about/bio/tape.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 25px;
+        width: 75px;
+      }
+
+      &:before {
+        top: -15px;
+        transform: translateX(-50%);
+      }
+
+      &:after {
+        bottom: -15px;
+        transform: translateX(-50%) rotateY(180deg);
+      }
 
       .people-content {
         padding: 15px;
