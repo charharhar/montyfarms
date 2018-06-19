@@ -224,6 +224,42 @@ p {
   }
 }
 
+@media (max-width: 576px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .section-heading {
+    .heading-container {
+      position: relative;
+      margin: 7px 0;
+
+      &.white-heading,
+      &.green-heading {
+        &:before {
+          height: 15px;
+          width: 15px;
+          right: -15px;
+          top: -10px;
+        }
+      }
+    }
+  }
+}
+
 /**
  * Button styles
  */
@@ -363,6 +399,43 @@ a.navLink {
   }
 }
 
+@media (max-width: 768px) {
+  nav.main-navigation {
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+
+    .hamburger,
+    .navigation-logo-wrapper {
+      display: block;
+      margin: 15px 25px;
+    }
+
+    .navigation-list-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: translateX(100%);
+      transition: 600ms all cubic-bezier(.25, .1, .25, 1);
+      padding: 0;
+      margin: 0;
+
+      &.mobile-active {
+        transform: translateX(10%);
+      }
+
+      &:before { display: none; }
+
+      ul {
+        flex-flow: column;
+      }
+    }
+  }
+}
+
 /*
  * ==============================================
  *             HAMBURGER STYLE
@@ -386,11 +459,12 @@ a.navLink {
   outline: none;
   border-radius: 5px;
   transform: scale(.7, .7);
+  display: none;
 
   .hamburger-box {
     position: relative;
     display: inline-block;
-    width: 40px;
+    width: 60px;
     height: 24px;
 
     .hamburger-inner {
@@ -416,7 +490,7 @@ a.navLink {
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
-      width: 40px;
+      width: 60px;
       height: 4px;
       background-color: $main-white;
       border-radius: 4px;
@@ -557,6 +631,10 @@ section.section-hero {
       align-items: center;
       justify-content: center;
 
+      h1 {
+        white-space: nowrap;
+      }
+
       &.hero-heading {
         position: absolute;
         top: 50%;
@@ -577,6 +655,28 @@ section.section-hero {
     p.hero-blurb {
       color: #fff;
       margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section.section-hero {
+    min-height: auto;
+
+    .hero-container {
+
+      .section-heading {
+        &.hero-heading {
+          width: 100%;
+          max-width: 320px;
+          padding: 0 20px;
+        }
+      }
+
+      .heading-underline {
+        margin-bottom: 15px;
+        border-bottom-width: 1px;
+      }
     }
   }
 }
@@ -635,6 +735,35 @@ footer.section-footer {
       font-size: 12px;
       text-transform: uppercase;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer.section-footer {
+    height: auto;
+
+    .footer-left,
+    .footer-right {
+      align-items: flex-start;
+    }
+
+    .footer-center {
+      .footer-nav-wrapper {
+        margin-bottom: 15px;
+
+        ul {
+          flex-flow: column;
+
+          li {
+            margin-bottom: 12px;
+
+            a {
+              font-family: $futura-med;
+            }
+          }
+        }
+      }
     }
   }
 }

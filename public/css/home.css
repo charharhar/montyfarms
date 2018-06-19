@@ -112,7 +112,8 @@ section.home-view--findus {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    width: 85%;
+    width: 100%;
+    max-width: 1120px;
     margin: 0 auto;
 
     figure {
@@ -158,5 +159,34 @@ section.home-view--reachus {
         margin-bottom: 30px;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+
+  section.home-view--findus {
+    height: 200px;
+
+    .findus-container {
+      flex-flow: row wrap;
+
+      figure {
+        flex: 0 1 25%;
+        margin-bottom: 20px;
+
+        img {
+          height: 50px;
+        }
+      }
+
+      .section-heading {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  section.home-view--sneak {
+    max-height: none;
+    min-height: 420px;
   }
 }
