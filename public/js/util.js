@@ -10,14 +10,23 @@ export function hotReload() {
 export function mobileNavHandler(toggle, mobileNav) {
 
   toggle.addEventListener('click', function(e) {
+    const wrapper = document.querySelector('.wrapper');
+    const html = document.querySelector('html');
+    const body = document.querySelector('body');
     e.preventDefault();
 
     if (this.classList.contains('mobile-active') === true) {
       this.classList.remove('mobile-active')
       mobileNav.classList.remove('mobile-active')
+      wrapper.classList.remove('mobile-active')
+      html.classList.remove('mobile-active')
+      body.classList.remove('mobile-active')
     } else {
       this.classList.add('mobile-active');
       mobileNav.classList.add('mobile-active');
+      wrapper.classList.add('mobile-active');
+      html.classList.add('mobile-active')
+      body.classList.add('mobile-active')
     }
 
   });

@@ -16,8 +16,8 @@ footerCopyrightYear(footerCopy);
  * MOBILE NAV HANDLER
  */
 const hamburger = document.querySelector('.hamburger');
-const mobileNavList = document.querySelector('.mobile-nav-list');
+const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
-mobileNavHandler(hamburger, mobileNavList);
+mobileNavHandler(hamburger, navigationListWrapper);
 
 hotReload();

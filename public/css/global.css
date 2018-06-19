@@ -65,6 +65,14 @@ html, body {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  html, body, .wrapper {
+    &.mobile-active {
+      overflow: hidden;
+    }
+  }
+}
+
 .flex-display {
   display: flex;
 
@@ -412,25 +420,40 @@ a.navLink {
       margin: 15px 25px;
     }
 
+    .hamburger {
+      z-index: 1100;
+      margin-top: 25px;
+    }
+
     .navigation-list-wrapper {
       position: fixed;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      transform: translateX(100%);
-      transition: 600ms all cubic-bezier(.25, .1, .25, 1);
       padding: 0;
       margin: 0;
+      transform: translateX(100%);
+      transition: 400ms transform cubic-bezier(.25, .1, .25, 1);
 
       &.mobile-active {
-        transform: translateX(10%);
+        transform: translateX(0);
       }
 
       &:before { display: none; }
 
       ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
         flex-flow: column;
+        background-color: rgba(0, 0, 0, .85);
+
+        li {
+          margin-bottom: 25px;
+        }
       }
     }
   }
@@ -465,7 +488,7 @@ a.navLink {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 24px;
+    height: 34px;
 
     .hamburger-inner {
       display: block;
@@ -491,7 +514,7 @@ a.navLink {
     .hamburger-inner::before,
     .hamburger-inner::after {
       width: 60px;
-      height: 4px;
+      height: 6px;
       background-color: $main-white;
       border-radius: 4px;
       position: absolute;
@@ -510,14 +533,14 @@ a.navLink {
       top: 2px;
 
       &:before {
-        top: 10px;
+        top: 14px;
         transition-property: transform, opacity;
         transition-timing-function: ease;
         transition-duration: 300ms;
       }
 
       &:after {
-        top: 20px;
+        top: 28px;
       }
     }
 
@@ -526,15 +549,15 @@ a.navLink {
   &.mobile-active {
     .hamburger-box {
       .hamburger-inner {
-        transform: translate3d(0, 10px, 0) rotate(45deg);
+        transform: translate3d(0, 14px, 0) rotate(45deg);
 
         &:before {
-          transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+          transform: rotate(-45deg) translate3d(-5.71429px, -10px, 0);
           opacity: 0;
         }
 
         &:after {
-          transform: translate3d(0, -20px, 0) rotate(90deg);
+          transform: translate3d(0, -28px, 0) rotate(90deg);
         }
       }
 
