@@ -30,21 +30,90 @@ section.section.about-view--values {
     max-width: 320px;
   }
 
-  .values-slider {
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    margin: 0 auto;
-    margin-bottom: 40px;
+  .values-carousel-container {
+    height: 210px;
+    width: 210px;
+    position: relative;
+    perspective: 1000px;
+    margin: 0 auto 40px;
+
+    .values-carousel {
+      position: relative;
+      display: block;
+      height: 210px;
+      width: 210px;
+      transform: translateZ(-600px) rotateY(0deg);
+      transform-style: preserve-3d;
+      transition: transform 1000ms ease;
+
+      .values-slide {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        cursor: pointer;
+        transition: opacity 1s ease-out;
+
+        &:nth-child(1) { transform: rotateY(0deg) translateZ(600px); }
+        &:nth-child(2) { transform: rotateY(24deg) translateZ(600px); }
+        &:nth-child(3) { transform: rotateY(48deg) translateZ(600px); }
+        &:nth-child(4) { transform: rotateY(72deg) translateZ(600px); }
+        &:nth-child(5) { transform: rotateY(96deg) translateZ(600px); }
+
+        &:nth-child(6) { transform: rotateY(120deg) translateZ(600px); }
+        &:nth-child(7) { transform: rotateY(144deg) translateZ(600px); }
+        &:nth-child(8) { transform: rotateY(168deg) translateZ(600px); }
+        &:nth-child(9) { transform: rotateY(192deg) translateZ(600px); }
+        &:nth-child(10) { transform: rotateY(216deg) translateZ(600px); }
+        &:nth-child(11) { transform: rotateY(240deg) translateZ(600px); }
+        &:nth-child(12) { transform: rotateY(264deg) translateZ(600px); }
+        &:nth-child(13) { transform: rotateY(288deg) translateZ(600px); }
+        &:nth-child(14) { transform: rotateY(312deg) translateZ(600px); }
+        &:nth-child(15) { transform: rotateY(336deg) translateZ(600px); }
+
+        .slide-contents {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          height: 210px;
+          width: 210px;
+
+          figure {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 90px;
+          }
+
+          h3 {
+            color: $main-white;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: $futura-med;
+          }
+        }
+      }
+    }
   }
 
-  .values-container {
+  .slick-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .slide-contents {
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 210px;
+    max-width: 210px;
 
     figure {
-      width: 50px;
+      width: 100%;
       margin: 0 auto;
+      max-width: 90px;
     }
 
     h3 {
@@ -213,6 +282,45 @@ section.section.about-view--friends {
 }
 
 @media (max-width: 768px) {
+  section.section.about-view--values {
+    min-height: 720px;
+
+    .values-carousel-container {
+      overflow: hidden;
+
+      .values-carousel {
+        position: relative;
+        display: block;
+        height: 210px;
+        width: 210px;
+        transform: translateZ(-600px) rotateY(24deg);
+        transform-style: preserve-3d;
+        transition: transform 1000ms ease;
+
+        .values-slide {
+          position: absolute;
+          width: 210px;
+          height: 210px;
+
+          &:nth-child(1) { transform: rotateY(-48deg) translateZ(600px); }
+          &:nth-child(2) { transform: rotateY(-24deg) translateZ(600px); }
+          &:nth-child(3) { transform: rotateY(0deg) translateZ(600px); }
+          &:nth-child(4) { transform: rotateY(24deg) translateZ(600px); }
+          &:nth-child(5) { transform: rotateY(48deg) translateZ(600px); }
+
+          .slide-contents {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            height: 210px;
+            width: 210px;
+          }
+        }
+      }
+    }
+  }
+
   section.section.about-view--people {
     min-height: auto;
 
