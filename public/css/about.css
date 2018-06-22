@@ -31,6 +31,11 @@ section.section.about-view--values {
     width: 100%;
   }
 
+  .values-carousel-section {
+    position: relative;
+    width: 100%;
+  }
+
   .values-carousel-container {
     height: 210px;
     width: 210px;
@@ -45,7 +50,10 @@ section.section.about-view--values {
       width: 210px;
       transform: translateZ(-600px) rotateY(0deg);
       transform-style: preserve-3d;
-      transition: transform 1000ms ease;
+
+      &.carousel-animate {
+        transition: transform 1000ms ease;
+      }
 
       .values-slide {
         position: absolute;
@@ -287,6 +295,10 @@ section.section.about-view--friends {
         height: 210px;
         width: 210px;
         transform: translateZ(-600px) rotateY(24deg);
+
+        &.carousel-animate {
+          transition: transform 300ms ease;
+        }
 
         .values-slide {
           width: 210px;
