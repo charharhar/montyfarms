@@ -27,16 +27,17 @@ mobileNavHandler(hamburger, navigationListWrapper);
  */
 const valuesCarousel = document.querySelector('.values-carousel');
 const carouselSlides = sliceArray(valuesCarousel.querySelectorAll('.values-slide'));
+const valuesBlurbs = sliceArray(document.querySelectorAll('.values-blurb'))
 
 const MULTIPLIERS = [2, 1, 0, -1, -2]
 const SLIDES_TO_SHOW = 5;
 const theta = 24;
 const radius = 600;
 let currentMultiplier = 0;
-
 let currentIndex = 0;
+let currentBlurb = carouselSlides[currentIndex].getAttribute('data-blurb')
 let activeSlides = [13, 14, 0, 1, 2];
-let activeIndexMapping = {}
+let multiplierHashMap = {}
 
 const updateIndexMapping = function() {
   const tempIndexMapping = {}
@@ -45,26 +46,46 @@ const updateIndexMapping = function() {
     tempIndexMapping[slide] = MULTIPLIERS[index]
   })
 
-  activeIndexMapping = tempIndexMapping;
+  multiplierHashMap = tempIndexMapping;
 }
 
-const handleSlideChange = function() {
+const handleCarouselRotate = function() {
   carouselSlides.forEach(slide => {
-    if (activeSlides.indexOf(parseInt(slide.getAttribute('index'))) == -1) {
+    const slideIndex = parseInt(slide.getAttribute('index'))
+    const img = slide.querySelector('.values-icon');
+    img.style.transform = `scale(1)`;
+    img.style.marginTop = `0`;
+
+    if (activeSlides.indexOf(slideIndex) == -1) {
       slide.style.opacity = 0;
       slide.style.top = `${-9999}px`;
     } else {
+      if (currentIndex === slideIndex) {
+        img.style.transform = `scale(1.85)`;
+        img.style.marginTop = `${20}px`;
+      }
       slide.style.opacity = 1;
       slide.style.top = 0;
     }
   });
 
-  valuesCarousel.style.transform = `translateZ(-${radius}px) rotateY(${currentMultiplier * theta}deg) `
+  valuesBlurbs.forEach(blurb => {
+    blurb.style.transitionDuration = '0ms';
+    blurb.style.opacity = 0;
+
+    if (blurb.getAttribute('id') === `${currentBlurb}-blurb`) {
+      blurb.style.transitionDuration = '1000ms';
+      blurb.style.opacity = 1;
+    }
+  })
+
+  valuesCarousel.style.transform = `translateZ(-${radius}px) rotateY(${currentMultiplier * theta}deg)`
 }
 
-const handleSlideClick = function(e) {
+const handleSlideClickListener = function(e) {
   const target = findParent(e.target, 'values-slide')
   const nextIndex = parseInt(target.getAttribute('index'))
+  const nextBlurb = target.getAttribute('data-blurb');
   let nextActiveSlides;
 
   for (let i = 0; i < SLIDES_TO_SHOW; i++) {
@@ -75,7 +96,7 @@ const handleSlideClick = function(e) {
     } else if (nextIndex === 13) {
       nextActiveSlides = [11, 12, 13, 14, 0]
     } else if (nextIndex === 14) {
-      nextActiveSlides = [12, 13, 14, 1, 0]
+      nextActiveSlides = [12, 13, 14, 0, 1]
     } else {
       nextActiveSlides = [
         nextIndex - 2,
@@ -88,15 +109,16 @@ const handleSlideClick = function(e) {
   }
 
   currentIndex = nextIndex;
-  currentMultiplier = currentMultiplier + activeIndexMapping[currentIndex]
-
+  currentBlurb = nextBlurb;
+  currentMultiplier = currentMultiplier + multiplierHashMap[currentIndex]
   activeSlides = nextActiveSlides;
+
   updateIndexMapping()
-  handleSlideChange()
+  handleCarouselRotate()
 }
 
 updateIndexMapping()
-handleSlideChange();
-valuesCarousel.addEventListener('click', handleSlideClick)
+handleCarouselRotate();
+valuesCarousel.addEventListener('click', handleSlideClickListener)
 
 hotReload();

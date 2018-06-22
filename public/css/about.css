@@ -28,6 +28,7 @@ section.section.about-view--values {
   p.hero-blurb {
     color: $main-white;
     max-width: 320px;
+    width: 100%;
   }
 
   .values-carousel-container {
@@ -51,7 +52,7 @@ section.section.about-view--values {
         width: 210px;
         height: 210px;
         cursor: pointer;
-        transition: opacity 1s ease-out;
+        transition: 1000ms opacity ease-out;
 
         &:nth-child(1) { transform: rotateY(0deg) translateZ(600px); }
         &:nth-child(2) { transform: rotateY(24deg) translateZ(600px); }
@@ -81,7 +82,9 @@ section.section.about-view--values {
           figure {
             width: 100%;
             margin: 0 auto;
+
             img {
+              transition: 1000ms ease-out all;
               height: 68px;
             }
           }
@@ -98,32 +101,22 @@ section.section.about-view--values {
     }
   }
 
-  .slick-carousel-container {
+  .values-blurb-container {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-  }
+    min-height: 150px;
+    width: 350px;
+    margin: 0 auto;
 
-  .slide-contents {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    max-height: 210px;
-    max-width: 210px;
-
-    figure {
-      width: 100%;
-      margin: 0 auto;
-      max-width: 90px;
-    }
-
-    h3 {
-      color: $main-white;
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 20px;
-      font-family: $futura-med;
+    p.values-blurb {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      padding: 15px;
+      transition-duration: 0ms;
+      transition-property: all;
+      transition-timing-function: ease-out;
     }
   }
 }
@@ -262,13 +255,14 @@ section.section.about-view--friends {
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
-    max-width: 75%;
+    width: 100%;
+    max-width: 968px;
     margin: 0 auto;
 
     .friends-logo {
       display: flex;
       margin-bottom: 30px;
-      flex: 0 1 17%;
+      flex: 0 1 20%;
 
       &:nth-of-type(5n) {
         margin-right: 0;
@@ -276,8 +270,6 @@ section.section.about-view--friends {
 
       img {
         margin: 0 auto;
-        max-width: 105px;
-        max-height: 70px;
       }
     }
   }
