@@ -83,6 +83,8 @@ const handleCarouselRotate = function() {
 }
 
 const handleSlideClickListener = function(e) {
+  console.dir(e.target)
+
   const target = findParent(e.target, 'values-slide')
   const nextIndex = parseInt(target.getAttribute('index'))
   const nextBlurb = target.getAttribute('data-blurb');

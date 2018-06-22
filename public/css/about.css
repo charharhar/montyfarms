@@ -78,6 +78,7 @@ section.section.about-view--values {
           justify-content: center;
           height: 210px;
           width: 210px;
+          overflow: hidden;
 
           figure {
             width: 100%;
@@ -283,30 +284,15 @@ section.section.about-view--friends {
       overflow: hidden;
 
       .values-carousel {
-        position: relative;
-        display: block;
         height: 210px;
         width: 210px;
         transform: translateZ(-600px) rotateY(24deg);
-        transform-style: preserve-3d;
-        transition: transform 1000ms ease;
 
         .values-slide {
-          position: absolute;
           width: 210px;
           height: 210px;
 
-          &:nth-child(1) { transform: rotateY(-48deg) translateZ(600px); }
-          &:nth-child(2) { transform: rotateY(-24deg) translateZ(600px); }
-          &:nth-child(3) { transform: rotateY(0deg) translateZ(600px); }
-          &:nth-child(4) { transform: rotateY(24deg) translateZ(600px); }
-          &:nth-child(5) { transform: rotateY(48deg) translateZ(600px); }
-
           .slide-contents {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
             height: 210px;
             width: 210px;
           }
