@@ -36,6 +36,8 @@ section.home-view--about {
     bottom: 0;
     left: 0;
     width: 100%;
+    transform: translateY(10%);
+
     img {
       filter: opacity(8%);
     }
@@ -50,10 +52,11 @@ section.home-view--about {
     justify-content: space-between;
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 
     .product-container {
       flex: 0 1 45%;
+
       h2 {
         margin-bottom: 40px;
       }
@@ -116,9 +119,9 @@ section.home-view--about {
             &#sweetonion { max-width: 170px; }
             &#plantain { max-width: 170px; }
             &#cucumber { max-width: 170px; }
-            &#butternut { max-width: 70px; }
+            &#butternut { max-width: 50px; }
             &#potatoflour { max-width: 170px; }
-            &#juice { max-width: 170px; }
+            &#juice { max-width: 120px; }
           }
         }
       }
@@ -145,6 +148,22 @@ section.home-view--sneak {
     width: 54px;
     margin: 20px auto 0;
     cursor: pointer;
+    transition: 200ms all ease;
+
+    &:hover {
+      border-color: $main-red;
+
+      svg {
+        stroke: $main-red;
+      }
+    }
+
+    svg {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 4;
+      transition: 200ms all ease;
+    }
   }
 
   .section-container {
@@ -228,16 +247,33 @@ section.home-view--reachus {
 @media (max-width: 768px) {
 
   section.home-view--about {
+    figure.about-border-blackseed {
+      left: 5%;
+      transform: translateY(-50%);
+      max-width: 80px;
+    }
+
+    figure.about-border-yellowseed {
+      max-width: 80px;
+    }
+
+    figure.about-border-leaf {
+      width: 100%;
+    }
+
     .products-container {
       flex-flow: column;
 
       .product-container {
         flex: 0 1 100%;
 
+        h3 {
+        }
+
         .products {
 
           .product {
-            width: 45%;
+            width: 35%;
             margin-right: 10%;
 
             &:nth-of-type(3) {
@@ -246,6 +282,20 @@ section.home-view--reachus {
 
             &:nth-of-type(2n) {
               margin-right: 0;
+            }
+
+            &:nth-of-type(5) {
+              margin-right: 0;
+            }
+
+            figure.product-fruit-img {
+
+              &#juice {
+                max-width: 75px;
+              }
+              &#butternut {
+                max-width: 30px;
+              }
             }
           }
         }

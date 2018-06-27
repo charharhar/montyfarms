@@ -279,6 +279,7 @@ a.button {
   text-decoration: none;
   text-align: center;
   padding: 6px 20px;
+  background: transparent;
   border: 3px solid transparent;
   min-width: 120px;
   border-radius: 25px;
@@ -584,6 +585,10 @@ section.section {
     justify-content: center;
     padding: 15px;
     height: 340px;
+
+    &.thin-block {
+      height: 280px;
+    }
   }
 
   .section-fixed-image {

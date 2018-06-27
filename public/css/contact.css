@@ -26,7 +26,8 @@ section.contact-view--form {
 
     .form-container {
       position: relative;
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
       margin: 0 auto;
 
       .contact-info {
@@ -111,6 +112,47 @@ section.contact-view--images {
 
     figure {
       margin: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section.contact-view--images {
+    .section-container {
+      flex-flow: column;
+      padding: 15px;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+
+      figure {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  section.contact-view--form {
+    .section-container {
+      .heading-block {
+        height: auto;
+        padding: 0;
+      }
+
+      .form-container .contact-info {
+        position: relative;
+        top: 0;
+        left: 0;
+        align-items: center;
+        margin: 25px 0;
+
+        .contact:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      form {
+        margin-top: 0;
+      }
     }
   }
 }
