@@ -2,6 +2,10 @@
 
 section.section {
 
+  .section-container {
+    padding: 15px 0;
+  }
+
   .section-fixed-image {
     height: 100vh;
     height: calc(100vh - 340px);
@@ -24,6 +28,21 @@ section.section-hero {
   .hero-background-container {
     .hero-background-image {
       background-image: url(/images/responsibilities/responsibilities-hero.jpg);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section.section {
+    .heading-block {
+      height: auto;
+      padding-bottom: 45px;
+    }
+
+    .section-fixed-image {
+      height: auto;
+      min-height: 260px;
+      background-attachment: initial;
     }
   }
 }
