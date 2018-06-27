@@ -16,7 +16,7 @@ const compiler = webpack(config);
 
 const isDev = process.env.NODE_ENV === 'development';
 const ngrok = process.env.ENABLE_TUNNEL === 'true' ? require('ngrok') : false;
-const port = process.env.PORT || 3000;
+const port = process.env.ENABLE_TUNNEL === 'true' ? 1337 : process.env.PORT || 3000;
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.

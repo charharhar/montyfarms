@@ -42,7 +42,7 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
-    "develop": "rimraf build;cross-env NODE_ENV=development webpack --config webpack/webpack.config.js;cross-env NODE_ENV=development babel-node app.js",
+    "develop": "cross-env NODE_ENV=development webpack --config webpack/webpack.config.js;cross-env NODE_ENV=development babel-node app.js",
     "build": "rimraf build;cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "start": "cross-env NODE_ENV=production babel-node app.js",
     "tunnel:build": "rimraf build;cross-env NODE_ENV=production ENABLE_TUNNEL=true webpack --config webpack/webpack.config.js",
