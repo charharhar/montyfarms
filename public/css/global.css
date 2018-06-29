@@ -384,6 +384,25 @@ nav.main-navigation {
           font-size: 18px;
 
           &.navLink {
+            position: relative;
+            &.active {
+              color: $main-yellow;
+
+              &:before {
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 7px;
+                width: 100%;
+                background-image: url(/images/icons/navbar-underline.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+            }
+
             &:hover {
               color: $main-yellow;
             }
