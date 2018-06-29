@@ -3,7 +3,7 @@
 section.section-hero {
   .hero-background-container {
     .hero-background-image {
-      background-image: url(/images/home/home-hero.png);
+      background-image: url(/images/home/homepage-hero.jpg);
     }
   }
 
@@ -244,6 +244,19 @@ section.home-view--reachus {
   }
 }
 
+@media (min-width: 1200px) {
+  section.home-view--about {
+    figure.about-border-blackseed {
+      max-width: 275px;
+    }
+
+    figure.about-border-yellowseed {
+      max-width: 275px;
+      transform: translateX(35%);
+    }
+  }
+}
+
 @media (max-width: 768px) {
 
   section.home-view--about {
@@ -327,5 +340,64 @@ section.home-view--reachus {
   section.home-view--sneak {
     max-height: none;
     min-height: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  section.home-view--about {
+    figure.about-border-blackseed {
+      left: 5%;
+      transform: translateY(-50%);
+      max-width: 80px;
+    }
+
+    figure.about-border-yellowseed {
+      max-width: 80px;
+    }
+
+    figure.about-border-leaf {
+      width: 100%;
+    }
+
+    .products-container {
+      flex-flow: column;
+
+      .product-container {
+        flex: 0 1 100%;
+
+        h3 {
+        }
+
+        .products {
+
+          .product {
+            width: 35%;
+            margin-right: 10%;
+
+            &:nth-of-type(3) {
+              margin-right: 10%;
+            }
+
+            &:nth-of-type(2n) {
+              margin-right: 0;
+            }
+
+            &:nth-of-type(5) {
+              margin-right: 0;
+            }
+
+            figure.product-fruit-img {
+
+              &#juice {
+                max-width: 75px;
+              }
+              &#butternut {
+                max-width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

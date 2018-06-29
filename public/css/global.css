@@ -25,6 +25,11 @@ $main-red: #ed3424;
 $main-yellow: #fbb621;
 $main-green: #579843;
 
+$xs-device: 576px;
+$sm-device: 768px;
+$md-device: 992px;
+$lg-device: 1200px;
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -294,7 +299,7 @@ a.button {
     border-color: $main-yellow;
 
     &:hover {
-      color: $main-black;
+      color: $main-red;
     }
   }
 
@@ -337,7 +342,7 @@ nav.main-navigation {
 
   .navigation-logo-wrapper {
     position: absolute;
-    margin: 0 50px;
+    margin: 0;
     left: 50%;
     transform: translateX(-50%);
 
@@ -404,6 +409,7 @@ a.navLink {
       position: relative;
       left: 0;
       transform: translateX(0);
+      margin: 0 50px;
     }
   }
 }
