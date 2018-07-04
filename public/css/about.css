@@ -23,12 +23,46 @@ section.section.about-view--core {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .core-contents {
-      flex: 0 1 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex: 0 1 45%;
+      margin-bottom: 60px;
 
-      figure {
-        max-width: 100px;
+      &#core-hectares figure {
+        width: 200px;
+      }
+
+      &#core-countries figure {
+        width: 130px;
+      }
+
+      &#core-crops figure {
+        width: 130px;
+      }
+
+      &#core-scale figure {
+        width: 100px;
+      }
+
+      .core-blurb {
+        color: $main-green;
+
+        .core-inline {
+          display: inline-block;
+        }
+
+        h4 {
+          font-size: 40px;
+          font-family: $futura-med;
+          line-height: 100%;
+        }
+        p {
+          font-family: $futura-med;
+        }
       }
     }
   }
