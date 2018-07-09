@@ -28,7 +28,7 @@ section.section.about-view--core {
     .core-contents {
       display: flex;
       align-items: flex-end;
-      justify-content: center;
+      justify-content: flex-start;
       flex: 0 1 45%;
       margin-bottom: 60px;
 
@@ -37,11 +37,11 @@ section.section.about-view--core {
       }
 
       &#core-countries figure {
-        width: 130px;
+        width: 95px;
       }
 
       &#core-crops figure {
-        width: 130px;
+        width: 105px;
       }
 
       &#core-scale figure {
@@ -59,7 +59,18 @@ section.section.about-view--core {
           font-size: 40px;
           font-family: $futura-med;
           line-height: 100%;
+
+          &.large {
+            font-size: 80px;
+          }
         }
+
+        h5 {
+          font-size: 40px;
+          font-family: $futura-med;
+          line-height: 100%;
+        }
+
         p {
           font-family: $futura-med;
         }
@@ -215,9 +226,9 @@ section.section.about-view--people {
 
     .people-banner {
       position: relative;
-      max-width: 250px;
+      max-width: 260px;
       width: 100%;
-      margin: 17px 30px;
+      margin: 17px 0;
       background-color: #173633;
 
       &:before,
@@ -229,8 +240,8 @@ section.section.about-view--people {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 25px;
-        width: 75px;
+        height: 30px;
+        width: 80px;
       }
 
       &:before {
@@ -244,7 +255,7 @@ section.section.about-view--people {
       }
 
       .people-content {
-        padding: 15px;
+        padding: 25px 15px;
       }
 
       h3 {
