@@ -8,6 +8,82 @@ section.section-hero {
   }
 }
 
+section.products-view--calendar {
+
+  .desktop-calendar {
+    width: 100%;
+    max-width: 992px;
+    margin: 40px auto;
+
+    .calendar-table {
+      .table-row {
+        position: relative;
+        display: flex;
+        padding: 10px 0;
+
+        .cell-content {
+          display: flex;
+          justify-content: center;
+          flex: 0 1 6%;
+          font-family: $futura-med;
+          color: $main-green;
+
+          &:first-of-type {
+            font-size: 14px;
+            flex-grow: 1;
+          }
+        }
+      }
+
+      .calendar-head {
+        padding-bottom: 15px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 6px;
+          width: 100%;
+          border-radius: 6px;
+          background-color: $main-green;
+        }
+      }
+
+      .calendar-body {
+        align-items: center;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 15px;
+          background-image: url(/images/products/soil.png);
+          background-position: 0 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .cell-content {
+          font-family: $futura-med;
+          color: $main-green;
+          text-transform: uppercase;
+
+          &:first-of-type {
+            background-color: transparent;
+            font-size: 28px;
+            justify-content: flex-start;
+          }
+
+          img {
+            max-width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
 section.products-view--products {
   background-color: #eee;
 }
