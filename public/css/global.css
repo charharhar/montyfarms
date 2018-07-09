@@ -299,7 +299,9 @@ a.button {
     border-color: $main-yellow;
 
     &:hover {
-      color: $main-red;
+      background-color: $main-white;
+      color: $main-yellow;
+      border-color: $main-yellow;
     }
   }
 
@@ -323,6 +325,41 @@ figure {
     width: 100%;
     vertical-align: bottom;
   }
+}
+
+.chevron-border {
+  padding: 15px;
+  border: 4px solid $main-yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 900;
+
+  .chevron {
+    position: relative;
+    top: -5px;
+    transform: rotate(135deg);
+    border-style: solid;
+    border-width: 4px 4px 0 0;
+    border-color: $main-yellow;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+
+    &.bounce {
+      animation: bouncing .5s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(.5, .05, 1, .5);
+    }
+  }
+}
+
+@keyframes bouncing {
+  from { transform: translate3d(0, 0, 0) rotate(135deg); }
+  to { transform: translate3d(0, 5px, 0) rotate(135deg); }
 }
 
 /**
@@ -385,26 +422,30 @@ nav.main-navigation {
 
           &.navLink {
             position: relative;
+
+            &:hover,
             &.active {
               color: $main-yellow;
 
               &:before {
-                content: '';
-                position: absolute;
-                bottom: -12px;
-                left: 50%;
-                transform: translateX(-50%);
-                height: 7px;
-                width: 100%;
-                background-image: url(/images/icons/navbar-underline.svg);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
+                opacity: 1;
               }
             }
 
-            &:hover {
-              color: $main-yellow;
+            &:before {
+              content: '';
+              opacity: 0;
+              position: absolute;
+              bottom: -12px;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 7px;
+              width: 100%;
+              background-image: url(/images/icons/navbar-underline.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              transition: 200ms all ease;
             }
           }
         }
@@ -777,6 +818,7 @@ footer.section-footer {
 
             &.navLink {
               &:hover {
+                color: $main-red;
               }
             }
           }

@@ -12,6 +12,13 @@ section.section-hero {
       max-width: 515px;
     }
   }
+
+  .chevron-border {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 section.home-view--about {
@@ -130,7 +137,7 @@ section.home-view--about {
 
   .products-seemore {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 150px;
   }
@@ -149,20 +156,14 @@ section.home-view--sneak {
     margin: 20px auto 0;
     cursor: pointer;
     transition: 200ms all ease;
-
-    &:hover {
-      border-color: $main-red;
-
-      svg {
-        stroke: $main-red;
-      }
-    }
+    animation: blinking 2s linear infinite;
 
     svg {
       fill: none;
       stroke: #fff;
       stroke-width: 4;
       transition: 200ms all ease;
+      animation: blinking 2s linear infinite;
     }
   }
 
@@ -178,6 +179,12 @@ section.home-view--sneak {
       background-image: url(/images/home/home-video-preview.jpg);
     }
   }
+}
+
+@keyframes blinking {
+  0% { border-color: $main-white; stroke: $main-white; }
+  50% { border-color: $main-red; stroke: $main-red; }
+  100% { border-color: $main-white; stroke: $main-white; }
 }
 
 section.home-view--findus {
@@ -241,6 +248,13 @@ section.home-view--reachus {
         margin-bottom: 30px;
       }
     }
+  }
+
+  .chevron-border {
+    position: fixed;
+    bottom: 130px;
+    right: 40px;
+    transform: rotate(180deg);
   }
 }
 
