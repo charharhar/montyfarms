@@ -2,6 +2,7 @@
 import '../css/products.css';
 import {
   hotReload,
+  slickHelper,
   mobileNavHandler,
   footerCopyrightYear,
 } from './util.js'
@@ -19,5 +20,10 @@ const hamburger = document.querySelector('.hamburger');
 const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
 mobileNavHandler(hamburger, navigationListWrapper);
+
+/**
+ * SLIDER HANDLER
+ */
+slickHelper('#plantain-main', '#plantain-thumbnails')
 
 hotReload();

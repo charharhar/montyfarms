@@ -108,7 +108,8 @@ section.products-view--products {
 
     img {
       position: relative;
-      max-width: 30px;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
 
       &:hover {
@@ -121,7 +122,7 @@ section.products-view--products {
   }
 
   .product-content-container {
-    max-width: 800px;
+    max-width: 992px;
     width: 100%;
     margin: 20px auto;
 
@@ -140,19 +141,55 @@ section.products-view--products {
       }
     }
 
-    .product-list {
-      ul {
-        list-style: none;
+    .product-slider {
+      .slider-main {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 43px;
 
-        li {
-          position: relative;
-          font-family: 'Apple Chancery';
-          font-size: 18px;
-          font-style: italic;
+        .slick-next:before,
+        .slick-prev:before {
+          content: '';
+        }
 
-          &:before {
-            content: '\00b7';
-          }
+        .slick-next,
+        .slick-prev {
+          height: 40px;
+          width: 40px;
+        }
+
+        .slick-next {
+          right: 0;
+
+          .chevron-border { transform: rotate(-90deg); }
+        }
+
+        .slick-prev {
+          left: 0;
+
+          .chevron-border { transform: rotate(90deg); }
+        }
+
+        .chevron-border {
+          padding: 7px 8px;
+        }
+      }
+
+      .slider-nav-thumbnails {
+        width: 80%;
+        margin: 0 auto;
+
+        .slick-slide {
+          padding: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .slick-slide {
+        outline: none;
+        img {
+          max-width: 100%;
+          height: auto;
         }
       }
     }
@@ -177,8 +214,13 @@ section.products-view--process {
       padding-top: 60px;
 
       figure {
-        max-width: 140px;
         margin: 0 auto 55px;
+        width: 140px;
+        height: 140px;
+
+        img {
+          height: 100%;
+        }
       }
     }
 

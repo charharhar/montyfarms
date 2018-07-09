@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>products route</title>
 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+
     <link rel="stylesheet" href="<%= assetsMap.products.css %>">
     <!-- <link rel="stylesheet" href="/css/products.css"> -->
 </head>
@@ -227,12 +230,12 @@
                         <img src="/images/products/product-icons/plantain-icon.svg" alt="">
                         <img src="/images/products/product-icons/cucumber-icon.svg" alt="">
                         <img src="/images/products/product-icons/eggplant-icon.svg" alt="">
-                        <img src="/images/products/product-icons/pumpkin-icon.svg" alt="">
-                        <img src="/images/products/product-icons/sweetpo-icon.svg" alt="">
+                        <img src="/images/products/product-icons/onion-icon.svg" alt="">
+                        <img src="/images/products/product-icons/pineapple-icon.svg" alt="">
                         <img src="/images/products/product-icons/sweetpo-icon.svg" alt="">
                     </div>
 
-                    <div class="product-content-container">
+                    <div class="product-content-container" id="plantain-container">
                         <div class="product-hero">
                             <figure class="product-hero-img">
                                 <img src="/images/products/product-assets/plantain/plantain.png" alt="">
@@ -247,12 +250,40 @@
                             </div>
                         </div>
 
-                        <div class="product-list">
-                            <ul>
-                                <li>Shipped in 50lb boxes</li>
-                                <li>Pallet count 42 boxes</li>
-                                <li>Shelf life: Plantains will keep for approximately 3 weeks depending on ambient surrounding.</li>
-                            </ul>
+                        <div class="product-content"></div>
+
+                        <div class="product-slider">
+                            <div class="slider-main" id="plantain-main">
+                                <div data-index="1">
+                                    <img src="/images/products/product-assets/plantain/photos/plantain1.png" alt="One">
+                                </div>
+                                <div data-index="2">
+                                    <img src="/images/products/product-assets/plantain/photos/plantain2.png" alt="One">
+                                </div>
+                                <div data-index="3">
+                                    <img src="/images/products/product-assets/plantain/photos/plantain3.png" alt="One">
+                                </div>
+                                <div data-index="4">
+                                    <img src="/images/products/product-assets/plantain/photos/plantain4.png" alt="One">
+                                </div>
+                                <div data-index="5">
+                                    <img src="/images/products/product-assets/plantain/photos/plantain5.png" alt="One">
+                                </div>
+                            </div>
+
+
+                            <div class="slider-nav-thumbnails" id="plantain-thumbnails">
+                                <div><img src="/images/products/product-assets/plantain/photos/plantain1.png" slide="plantain_1">
+                                </div>
+                                <div><img src="/images/products/product-assets/plantain/photos/plantain2.png" slide="plantain_2">
+                                </div>
+                                <div><img src="/images/products/product-assets/plantain/photos/plantain3.png" slide="plantain_3">
+                                </div>
+                                <div><img src="/images/products/product-assets/plantain/photos/plantain4.png" slide="plantain_4">
+                                </div>
+                                <div><img src="/images/products/product-assets/plantain/photos/plantain5.png" slide="plantain_5">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -362,6 +393,7 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="<%= assetsMap.products.js %>"></script>
     <!-- <script src="/js/products.js"></script> -->
 </body>

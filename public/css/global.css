@@ -337,6 +337,14 @@ figure {
   cursor: pointer;
   z-index: 900;
 
+  &.green {
+    border: 3px solid $main-green;
+
+    .chevron {
+      border-color: $main-green;
+    }
+  }
+
   .chevron {
     position: relative;
     top: -5px;

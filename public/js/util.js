@@ -2,6 +2,25 @@
 /**
  * Utility Functions
  */
+ export function slickHelper(main, thumbnail) {
+   $(main).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    asNavFor: thumbnail,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><div class='chevron-border green'><span class='chevron left'></span></div></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><div class='chevron-border green'><span class='chevron right'></span></div></button>",
+  })
+
+  $(thumbnail).slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: main,
+    dots: true,
+    focusOnSelect: true,
+  })
+ }
 
 export function hotReload() {
   return (process.env.NODE_ENV === 'development') && module.hot && module.hot.accept();
