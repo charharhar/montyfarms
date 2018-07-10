@@ -97,13 +97,30 @@ section.products-view--calendar {
 }
 
 section.products-view--products {
-  background-color: #eee;
 
   .products-buttons {
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+
+    .dotted-wrapper {
+      position: absolute;
+      right: 0;
+      transform: translateX(-175px);
+
+      figure {
+        width: 150px;
+      }
+
+      p {
+        transform: translateX(-90%);
+        display: inline-block;
+      }
+    }
 
     .buttons-container {
       display: flex;
@@ -463,4 +480,16 @@ section.products-view--process {
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  section.products-view--products {
+    .products-buttons {
+      .dotted-wrapper {
+        display: none;
+      }
+    }
+
+  }
+
 }

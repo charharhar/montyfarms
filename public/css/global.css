@@ -365,6 +365,41 @@ figure {
   }
 }
 
+.dotted-wrapper {
+  &.clip-to-right {
+    figure { animation-name: clipright; }
+  }
+
+  &.clip-to-left {
+    figure { animation-name: clipleft; }
+  }
+
+  figure {
+    animation-duration: 2000ms;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  p {
+    font-family: $futura-med;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+}
+
+@keyframes clipright {
+  0% { clip-path: inset(0 100% 0 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 0 100%); }
+}
+
+@keyframes clipleft {
+  0% { clip-path: inset(0 0 0 100%); }
+  50% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+
 @keyframes bouncing {
   from { transform: translate3d(0, 0, 0) rotate(135deg); }
   to { transform: translate3d(0, 5px, 0) rotate(135deg); }
