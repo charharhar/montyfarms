@@ -57,12 +57,12 @@
 
             <div class="hero-container">
                 <div class="section-heading hero-heading">
-                    <div class="heading-underline">
-                        <div class="heading-container white-heading">
+                    <div class="heading-underline waypoint">
+                        <div class="heading-container white-heading waypoint" data="bottomToTop">
                            <h1>Our products</h1>
                         </div>
                     </div>
-                    <p class="hero-blurb heading-blurb short">Monty Farms products are made using only the finest, ripest produce cultivated from our farm.</p>
+                    <p class="hero-blurb heading-blurb short waypoint" data="bottomToTop">Monty Farms products are made using only the finest, ripest produce cultivated from our farm.</p>
                 </div>
             </div>
         </section>
@@ -235,11 +235,11 @@
                             </div>
 
                             <div class="buttons-container">
-                                <div class="button-img"><img src="/images/products/product-icons/plantain-icon.svg" alt=""></div>
-                                <div class="button-img"><img src="/images/products/product-icons/cucumber-icon.svg" alt=""></div>
-                                <div class="button-img"><img src="/images/products/product-icons/eggplant-icon.svg" alt=""></div>
-                                <div class="button-img"><img src="/images/products/product-icons/onion-icon.svg" alt=""></div>
-                                <div class="button-img"><img src="/images/products/product-icons/sweetpo-icon.svg" alt=""></div>
+                                <div class="button-img active" id="plantainBtn"><img src="/images/products/product-icons/plantain-icon.svg" alt=""></div>
+                                <div class="button-img" id="cucumberBtn"><img src="/images/products/product-icons/cucumber-icon.svg" alt=""></div>
+                                <div class="button-img" id="butternutBtn"><img src="/images/products/product-icons/butternut-icon.svg" alt=""></div>
+                                <div class="button-img" id="onionBtn"><img src="/images/products/product-icons/onion-icon.svg" alt=""></div>
+                                <div class="button-img" id="sweetpotatoBtn"><img src="/images/products/product-icons/sweetpo-icon.svg" alt=""></div>
                             </div>
                         </div>
 
@@ -251,78 +251,567 @@
                             </div>
 
                             <div class="buttons-container">
-                                <div class="button-img"><img src="/images/products/product-icons/pineapple-icon.svg" alt=""></div>
-                                <div class="button-img"><img src="/images/products/product-icons/sweetpo-icon.svg" alt=""></div>
+                                <div class="button-img" id="pineappleBtn"><img src="/images/products/product-icons/pineapple-icon.svg" alt=""></div>
+                                <div class="button-img" id="sweetpotatoflourBtn"><img src="/images/products/product-icons/sweetpo-icon.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-content-container" id="plantain-container">
-                        <div class="product-hero">
-                            <figure class="product-hero-img">
-                                <img src="/images/products/product-assets/plantain/plantain.png" alt="">
-                            </figure>
-                            <div class="product-text">
-                                <figure class="product-hero-text">
-                                    <img src="/images/products/product-assets/plantain/plantain-text1.png" alt="">
+                    <div class="products-main-wrapper">
+                        <div class="product-content-container active" id="plantainContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/plantain/plantain.png" alt="">
                                 </figure>
-                                <figure class="product-hero-text">
-                                    <img src="/images/products/product-assets/plantain/plantain-text2.png" alt="">
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/plantain/plantain-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/plantain/plantain-text2.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="plantain" id="plantain-size" type="radio" checked>
+                                        <label for="plantain-size">Size</label>
+                                        <div class="content-text">
+                                            <h3>Length</h3>
+                                            <p>Minimal 23 cm straight and max 25 cm straight</p>
+                                            <h3>Curvature</h3>
+                                            <p>Both curved from peak to pomace</p>
+                                            <h3>Diameter</h3>
+                                            <p>minimal 4 cm and 7 cm maximal</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="plantain" id="plantain-pack" type="radio">
+                                        <label for="plantain-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <h3>Packed in boxes</h3>
+                                            <p>22.67 kg (55-65 pieces)</p>
+                                            <p>18.14 kg (45-50 pieces)</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="plantain" id="plantain-ship" type="radio">
+                                        <label for="plantain-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>7-13C / 45-55 F & relative humidity: 90% mist</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="plantain-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/plantain/photos/plantain1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/plantain/photos/plantain2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/plantain/photos/plantain3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/plantain/photos/plantain4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/plantain/photos/plantain5.png" alt="One">
+                                    </div>
+                                </div>
+
+
+                                <div class="slider-nav-thumbnails" id="plantain-thumbnails">
+                                    <div><img src="/images/products/product-assets/plantain/photos/plantain1.png" slide="plantain_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/plantain/photos/plantain2.png" slide="plantain_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/plantain/photos/plantain3.png" slide="plantain_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/plantain/photos/plantain4.png" slide="plantain_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/plantain/photos/plantain5.png" slide="plantain_5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Plantain -->
+
+                        <div class="product-content-container" id="cucumberContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/cucumber/cucumber.png" alt="">
                                 </figure>
-                            </div>
-                        </div>
-
-                        <div class="product-content">
-                            <div class="product-content-selections">
-                                <div class="content-selection">
-                                    <input name="plantain" id="plantain-size" type="radio">
-                                    <label for="plantain-size">Size</label>
-                                </div>
-                                <div class="content-selection">
-                                    <input name="plantain" id="plantain-pack" type="radio">
-                                    <label for="plantain-pack">Packaging</label>
-                                </div>
-                                <div class="content-selection">
-                                    <input name="plantain" id="plantain-ship" type="radio">
-                                    <label for="plantain-ship">Shipping</label>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/cucumber/cucumber-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/cucumber/cucumber-text2.png" alt="">
+                                    </figure>
                                 </div>
                             </div>
 
-                        </div>
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="cucumber" id="cucumber-pack" type="radio" checked>
+                                        <label for="cucumber-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <h3>Packed in 1 1/9 bushel boxes:</h3>
+                                            <p>Super Select: 350 grams to 450 grams</p>
+                                            <p>Select: 380 grams to 420 grams</p>
+                                            <p>24 count: 500 grams to 600 grams</p>
+                                            <h3>For USA:</h3>
+                                            <p>Super select: 1 1/9 box of 22.67 kg with approximately 65-72 pieces per box</p>
+                                            <p>Select:  1 1/9 box of 22.67 kg with approximately 65-72 pieces per box</p>
+                                            <p>24 count: 12.7 kg each box with 24 pieces</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="cucumber" id="cucumber-ship" type="radio">
+                                        <label for="cucumber-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>8.8C – 10C /48F – 50F</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="product-slider">
-                            <div class="slider-main" id="plantain-main">
-                                <div data-index="1">
-                                    <img src="/images/products/product-assets/plantain/photos/plantain1.png" alt="One">
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="cucumber-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/cucumber/photos/cucumber1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/cucumber/photos/cucumber2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/cucumber/photos/cucumber3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/cucumber/photos/cucumber4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/cucumber/photos/cucumber5.png" alt="One">
+                                    </div>
                                 </div>
-                                <div data-index="2">
-                                    <img src="/images/products/product-assets/plantain/photos/plantain2.png" alt="One">
+
+
+                                <div class="slider-nav-thumbnails" id="cucumber-thumbnails">
+                                    <div><img src="/images/products/product-assets/cucumber/photos/cucumber1.png" slide="cucumber_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/cucumber/photos/cucumber2.png" slide="cucumber_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/cucumber/photos/cucumber3.png" slide="cucumber_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/cucumber/photos/cucumber4.png" slide="cucumber_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/cucumber/photos/cucumber5.png" slide="cucumber_5">
+                                    </div>
                                 </div>
-                                <div data-index="3">
-                                    <img src="/images/products/product-assets/plantain/photos/plantain3.png" alt="One">
-                                </div>
-                                <div data-index="4">
-                                    <img src="/images/products/product-assets/plantain/photos/plantain4.png" alt="One">
-                                </div>
-                                <div data-index="5">
-                                    <img src="/images/products/product-assets/plantain/photos/plantain5.png" alt="One">
+                            </div>
+                        </div> <!-- cucumber -->
+
+                        <div class="product-content-container" id="butternutContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/butternut/butternut.png" alt="">
+                                </figure>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/butternut/butternut-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/butternut/butternut-text2.png" alt="">
+                                    </figure>
                                 </div>
                             </div>
 
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="butternut" id="butternut-size" type="radio" checked>
+                                        <label for="butternut-size">Packaging (USA)</label>
+                                        <div class="content-text">
+                                            <h3>Packed in 1 Bushel up 18.14 kg</h3>
+                                            <p>Small: 400 to 600 grams (32-42 pieces</p>
+                                            <p>Medium: 600 800 grams (26-32 pieces)</p>
+                                            <p>L-100: 800 grams to 1 kg (21-26 pieces)</p>
+                                            <p>Large: 800 grams to 1.2 kg (15-21 pieces)</p>
+                                            <p>1.2 kg and up (1-15 pieces)</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="butternut" id="butternut-pack" type="radio">
+                                        <label for="butternut-pack">Packaging (Europe)</label>
+                                        <div class="content-text">
+                                            <p>Small: 450 grams to 650 grams</p>
+                                            <p>Medium: 650 grams to 900 grams</p>
+                                            <p>Large: 900 grams to 1200 grams</p>
+                                            <p>XL: 1200 grams to 1400 grams</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="butternut" id="butternut-ship" type="radio">
+                                        <label for="butternut-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>13C / 57F</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="slider-nav-thumbnails" id="plantain-thumbnails">
-                                <div><img src="/images/products/product-assets/plantain/photos/plantain1.png" slide="plantain_1">
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="butternut-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/butternut/photos/butternut1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/butternut/photos/butternut2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/butternut/photos/butternut3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/butternut/photos/butternut4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/butternut/photos/butternut5.png" alt="One">
+                                    </div>
                                 </div>
-                                <div><img src="/images/products/product-assets/plantain/photos/plantain2.png" slide="plantain_2">
-                                </div>
-                                <div><img src="/images/products/product-assets/plantain/photos/plantain3.png" slide="plantain_3">
-                                </div>
-                                <div><img src="/images/products/product-assets/plantain/photos/plantain4.png" slide="plantain_4">
-                                </div>
-                                <div><img src="/images/products/product-assets/plantain/photos/plantain5.png" slide="plantain_5">
+
+
+                                <div class="slider-nav-thumbnails" id="butternut-thumbnails">
+                                    <div><img src="/images/products/product-assets/butternut/photos/butternut1.png" slide="butternut_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/butternut/photos/butternut2.png" slide="butternut_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/butternut/photos/butternut3.png" slide="butternut_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/butternut/photos/butternut4.png" slide="butternut_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/butternut/photos/butternut5.png" slide="butternut_5">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- butternut -->
+
+                        <div class="product-content-container" id="onionContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/onion/onion.png" alt="">
+                                </figure>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/onion/onion-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/onion/onion-text2.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="onion" id="onion-pack" type="radio" checked>
+                                        <label for="onion-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <h3>Packed in 18.14 kg boxes</h3>
+                                            <p>Medium: 2 ¾ to 3 ¼ inches (40-45 pieces)</p>
+                                            <p>Jumbo: 3 ¼ to 3 ¾ inches (60-65 pieces)</p>
+                                            <p>Colossal: 3 ¾ to 4 ¼ inches (60-80 pieces)</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="onion" id="onion-ship" type="radio">
+                                        <label for="onion-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>8.8C – 10C / 48F – 50F</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="onion-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/onion/photos/onion1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/onion/photos/onion2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/onion/photos/onion3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/onion/photos/onion4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/onion/photos/onion5.png" alt="One">
+                                    </div>
+                                </div>
+
+
+                                <div class="slider-nav-thumbnails" id="onion-thumbnails">
+                                    <div><img src="/images/products/product-assets/onion/photos/onion1.png" slide="onion_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/onion/photos/onion2.png" slide="onion_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/onion/photos/onion3.png" slide="onion_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/onion/photos/onion4.png" slide="onion_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/onion/photos/onion5.png" slide="onion_5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- onion -->
+
+                        <div class="product-content-container" id="sweetpotatoContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/sweetpotato/sweetpotato.png" alt="">
+                                </figure>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/sweetpotato/sweetpotato-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/sweetpotato/sweetpotato-text2.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="sweetpotato" id="sweetpotato-pack" type="radio" checked>
+                                        <label for="sweetpotato-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <p>S: 100 grams to 150 grams</p>
+                                            <p>M: 150 grams to 300 grams</p>
+                                            <p>L1: 300 grams to 450 grams</p>
+                                            <p>L2: 450 grams to 600 grams</p>
+                                            <p>XL: 600 grams to 750 grams</p>
+                                            <p>XXL: 750 grams and up</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="sweetpotato" id="sweetpotato-ship" type="radio">
+                                        <label for="sweetpotato-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>14C / 57F</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="sweetpotato-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/sweetpotato/photos/sweetpotato1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/sweetpotato/photos/sweetpotato2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/sweetpotato/photos/sweetpotato3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/sweetpotato/photos/sweetpotato4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/sweetpotato/photos/sweetpotato5.png" alt="One">
+                                    </div>
+                                </div>
+
+
+                                <div class="slider-nav-thumbnails" id="sweetpotato-thumbnails">
+                                    <div><img src="/images/products/product-assets/sweetpotato/photos/sweetpotato1.png" slide="sweetpotato_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotato/photos/sweetpotato2.png" slide="sweetpotato_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotato/photos/sweetpotato3.png" slide="sweetpotato_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotato/photos/sweetpotato4.png" slide="sweetpotato_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotato/photos/sweetpotato5.png" slide="sweetpotato_5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- sweetpotato -->
+
+                        <div class="product-content-container" id="pineappleContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/pineapple/pineapple.png" alt="">
+                                </figure>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/pineapple/pineapple-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/pineapple/pineapple-text2.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="pineapple" id="pineapple-size" type="radio" checked>
+                                        <label for="pineapple-size">Not From<br> Concentrate (NFC)<br>Specifications</label>
+                                        <div class="content-text">
+                                            <p>Brix: 11-13˚</p>
+                                            <p>Pulp content: 12-15%</p>
+                                            <p>pH: 3.4 – 3.9</p>
+                                            <p>Acidity: 0.4 – 0.65%</p>
+                                            <p>Ingredients: Mature and fresh pineapples</p>
+                                            <p>Packaged: In 220 kg aseptic bags and in a carton drum</p>
+                                            <p>Storage Temperature: Ambient temperature</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="pineapple" id="pineapple-pack" type="radio">
+                                        <label for="pineapple-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <p>Jumbo: 2.27 kg and up</p>
+                                            <p>First class: 1.81 kg to 2.27 kg</p>
+                                            <p>Second class: 1.59 kg to 1.81kg</p>
+                                            <p>Third class: 1.36 kg to 1.59 kg</p>
+                                            <p>Fourth class: 0.91 k to 1.36 kg</p>
+                                            <p>Fifth class: 0.91 kg to 1.13 kg</p>
+                                            <p>Sixth class: 0.91 kg, 0.68 kg and 0.45 kg</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="pineapple-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/pineapple/photos/pineapple1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/pineapple/photos/pineapple2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/pineapple/photos/pineapple3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/pineapple/photos/pineapple4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/pineapple/photos/pineapple5.png" alt="One">
+                                    </div>
+                                </div>
+
+
+                                <div class="slider-nav-thumbnails" id="pineapple-thumbnails">
+                                    <div><img src="/images/products/product-assets/pineapple/photos/pineapple1.png" slide="pineapple_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/pineapple/photos/pineapple2.png" slide="pineapple_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/pineapple/photos/pineapple3.png" slide="pineapple_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/pineapple/photos/pineapple4.png" slide="pineapple_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/pineapple/photos/pineapple5.png" slide="pineapple_5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- pineapple -->
+
+                        <div class="product-content-container" id="sweetpotatoflourContainer">
+                            <div class="product-hero">
+                                <figure class="product-hero-img">
+                                    <img src="/images/products/product-assets/sweetpotatoflour/sweetpotatoflour.png" alt="">
+                                </figure>
+                                <div class="product-text">
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/sweetpotatoflour-text1.png" alt="">
+                                    </figure>
+                                    <figure class="product-hero-text waypoint">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/sweetpotatoflour-text2.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <div class="product-content-selections">
+                                    <div class="content-selection">
+                                        <input name="sweetpotatoflour" id="sweetpotatoflour-pack" type="radio" checked>
+                                        <label for="sweetpotatoflour-pack">Packaging</label>
+                                        <div class="content-text">
+                                            <h3>Pallet Count</h3>
+                                            <p>160 = 6kg boxes</p>
+                                            <p>110 = 10kg boxes</p>
+                                            <p>2 = 500 kg bin</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-selection">
+                                        <input name="sweetpotatoflour" id="sweetpotatoflour-ship" type="radio">
+                                        <label for="sweetpotatoflour-ship">Shipping</label>
+                                        <div class="content-text">
+                                            <h3>Temperature</h3>
+                                            <p>14C / 57F</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-slider">
+                                <div class="slider-main" id="sweetpotatoflour-main">
+                                    <div data-index="1">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour1.png" alt="One">
+                                    </div>
+                                    <div data-index="2">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour2.png" alt="One">
+                                    </div>
+                                    <div data-index="3">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour3.png" alt="One">
+                                    </div>
+                                    <div data-index="4">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour4.png" alt="One">
+                                    </div>
+                                    <div data-index="5">
+                                        <img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour5.png" alt="One">
+                                    </div>
+                                </div>
+
+
+                                <div class="slider-nav-thumbnails" id="sweetpotatoflour-thumbnails">
+                                    <div><img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour1.png" slide="sweetpotatoflour_1">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour2.png" slide="sweetpotatoflour_2">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour3.png" slide="sweetpotatoflour_3">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour4.png" slide="sweetpotatoflour_4">
+                                    </div>
+                                    <div><img src="/images/products/product-assets/sweetpotatoflour/photos/sweetpotatoflour5.png" slide="sweetpotatoflour_5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- sweetpotatoflour -->
                     </div>
 
                 </div>
@@ -346,40 +835,40 @@
 
                 <div class="process-container">
                     <div class="process-image-container">
-                        <figure>
+                        <figure class="waypoint" data="bottomToTop">
                             <img src="/images/products/process-procurement.svg" alt="Monty farms procurement">
                         </figure>
 
-                        <figure>
+                        <figure class="waypoint" data="bottomToTop">
                             <img src="/images/products/process-practices.svg" alt="Monty farms best practices">
                         </figure>
 
-                        <figure>
+                        <figure class="waypoint" data="bottomToTop">
                             <img src="/images/products/process-standards.svg" alt="Monty farms best quality standards">
                         </figure>
 
-                        <figure>
+                        <figure class="waypoint" data="bottomToTop">
                             <img src="/images/products/process-delivery.svg" alt="Monty farms delivery">
                         </figure>
                     </div>
 
                     <div class="process-content-container">
-                        <div class="process-content">
+                        <div class="process-content waypoint">
                             <h3>procurement</h3>
                             <p>It all starts at the seed - Monty Farms is proud to procure the best seeds from the world and prime land allocation.</p>
                         </div>
 
-                        <div class="process-content">
+                        <div class="process-content waypoint">
                             <h3>best practices</h3>
                             <p>At Monty Farms we emphasize sustainable farming techniques that preserve soil stability while yielding the best crops by using crop rotation and minimizing chemical use.</p>
                         </div>
 
-                        <div class="process-content">
+                        <div class="process-content waypoint">
                             <h3>best quality standards</h3>
                             <p>Our commitment to adhering to strict standards is unwavering and we utilize third party independent audits of our farms on a regular basis to ensure our farms are running in at the highest quality to produce a consistent supply of our finest fruits and vegetables.</p>
                         </div>
 
-                        <div class="process-content">
+                        <div class="process-content waypoint">
                             <h3>delivery</h3>
                             <p>After harvesting, sorting, storing and packaging, we ensure that only the freshest produce are delivered directly to your door.</p>
                         </div>
