@@ -29,6 +29,11 @@ section.contact-view--form {
 
       a {
         color: $main-yellow;
+        transition: 200ms all ease;
+
+        &:hover {
+          color: $main-red;
+        }
       }
     }
 

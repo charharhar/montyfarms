@@ -535,6 +535,42 @@ a.navLink {
 }
 
 /*
+ * JS WAYPOINT ANIMATION
+ **/
+
+.waypoint {
+  transition: 1000ms all cubic-bezier(.25, .1, .25, 1);
+
+  &.inView {
+    opacity: 1;
+  }
+
+  &.notInView {
+    opacity: 0;
+  }
+
+  &.animated-visible {
+    transform: translate(0, 0);
+  }
+
+  &.bottomToTop-hidden {
+    transform: translateY(100px);
+  }
+
+  &.leftToRight-hidden {
+    transform: translateX(-100px);
+  }
+
+  &.rightToLeft-hidden {
+    transform: translateX(100px);
+  }
+
+  &.leftToRightSpecial-hidden {
+    transform: translateX(-100%);
+  }
+}
+
+/*
  * ==============================================
  *             HAMBURGER STYLE
  * ==============================================
@@ -746,12 +782,29 @@ section.section-hero {
     }
 
     .heading-underline {
+      position: relative;
       display: flex;
       justify-content: center;
       max-width: 420px;
       width: 100%;
-      border-bottom: 2px solid #fff;
       margin-bottom: 25px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $main-white;
+        transition: 1000ms all cubic-bezier(.25, .1, .25, 1);
+        transition-delay: 500ms;
+        transform: scaleX(0);
+      }
+
+      &.waypoint.inView:before {
+        transform: scaleX(1);
+      }
     }
 
     p.hero-blurb {

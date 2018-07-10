@@ -2,9 +2,13 @@
 import '../css/products.css';
 import {
   hotReload,
+  sliceArray,
   slickHelper,
   mobileNavHandler,
   footerCopyrightYear,
+  isScrolledIntoView,
+  scrolledInAnimationHandler,
+  handleAllAnimations,
 } from './util.js'
 
 /**
@@ -25,5 +29,13 @@ mobileNavHandler(hamburger, navigationListWrapper);
  * SLIDER HANDLER
  */
 slickHelper('#plantain-main', '#plantain-thumbnails')
+
+/**
+ * SCROLL ANIMATION HANDLER
+ */
+const waypoints = sliceArray(document.querySelectorAll('.waypoint'));
+
+window.addEventListener('scroll', e => handleAllAnimations(waypoints))
+window.addEventListener('load', e => handleAllAnimations(waypoints))
 
 hotReload();

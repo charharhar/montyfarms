@@ -2,8 +2,12 @@
 import '../css/contact.css';
 import {
   hotReload,
+  sliceArray,
   mobileNavHandler,
   footerCopyrightYear,
+  isScrolledIntoView,
+  scrolledInAnimationHandler,
+  handleAllAnimations,
 } from './util.js'
 
 /**
@@ -19,5 +23,13 @@ const hamburger = document.querySelector('.hamburger');
 const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
 mobileNavHandler(hamburger, navigationListWrapper);
+
+/**
+ * SCROLL ANIMATION HANDLER
+ */
+const waypoints = sliceArray(document.querySelectorAll('.waypoint'));
+
+window.addEventListener('scroll', e => handleAllAnimations(waypoints))
+window.addEventListener('load', e => handleAllAnimations(waypoints))
 
 hotReload();
