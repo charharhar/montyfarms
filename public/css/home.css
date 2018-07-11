@@ -27,7 +27,7 @@ section.home-view--about {
     top: 0;
     left: 5%;
     transform: translateY(-50%);
-    max-width: 200px;
+    max-width: 300px;
   }
 
   figure.about-border-yellowseed {
@@ -50,6 +50,10 @@ section.home-view--about {
     }
   }
 
+  .heading-block.thin-block {
+    height: 170px;
+  }
+
   .section-container {
     padding-bottom: 0;
   }
@@ -70,13 +74,14 @@ section.home-view--about {
 
       h3 {
         position: relative;
-        font-size: 22px;
+        font-size: 26px;
         text-align: center;
+        z-index: 2;
 
         &:before {
           content: '';
           position: absolute;
-          top: -10px;
+          top: -20px;
           left: 50%;
           width: 24px;
           height: 3px;
@@ -103,7 +108,7 @@ section.home-view--about {
           .product-content {
             display: flex;
             flex-flow: column;
-            padding-top: 25px;
+            padding-top: 40px;
             position: absolute;
             top: 0;
             left: 0;
@@ -118,17 +123,19 @@ section.home-view--about {
           }
 
           figure.product-fruit-img {
-            position: relative;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1;
-            margin: auto auto 0;
 
-            &#sweetpotato { max-width: 170px; }
-            &#sweetonion { max-width: 170px; }
-            &#plantain { max-width: 170px; }
-            &#cucumber { max-width: 170px; }
-            &#butternut { max-width: 50px; }
-            &#potatoflour { max-width: 170px; }
-            &#juice { max-width: 120px; }
+            &#sweetpotato { width: 180px; }
+            &#sweetonion { width: 180px; }
+            &#plantain { width: 180px; }
+            &#cucumber { width: 180px; }
+            &#butternut { width: 70px; }
+            &#potatoflour { width: 180px; }
+            &#juice { width: 130px; }
           }
         }
       }
@@ -271,12 +278,27 @@ section.home-view--reachus {
 @media (min-width: 1200px) {
   section.home-view--about {
     figure.about-border-blackseed {
-      max-width: 275px;
+      max-width: 300px;
     }
 
     figure.about-border-yellowseed {
       max-width: 275px;
       transform: translateX(35%);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  section.home-view--about {
+    figure.about-border-blackseed {
+      max-width: 200px;
+    }
+    .products-container {
+      .product-container {
+        h3 {
+          font-size: 22px;
+        }
+      }
     }
   }
 }
@@ -326,13 +348,6 @@ section.home-view--reachus {
             }
 
             figure.product-fruit-img {
-
-              &#juice {
-                max-width: 75px;
-              }
-              &#butternut {
-                max-width: 30px;
-              }
             }
           }
         }
@@ -390,6 +405,7 @@ section.home-view--reachus {
         flex: 0 1 100%;
 
         h3 {
+          font-size: 20px;
         }
 
         .products {
@@ -412,12 +428,13 @@ section.home-view--reachus {
 
             figure.product-fruit-img {
 
-              &#juice {
-                max-width: 75px;
-              }
-              &#butternut {
-                max-width: 30px;
-              }
+              &#sweetpotato { width: 130px; }
+              &#sweetonion { width: 130px; }
+              &#plantain { width: 130px; }
+              &#cucumber { width: 130px; }
+              &#butternut { width: 40px; }
+              &#potatoflour { width: 130px; }
+              &#juice { width: 75px; }
             }
           }
         }
