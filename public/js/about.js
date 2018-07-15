@@ -223,7 +223,7 @@ const carousel = {
         slide.style.top = `${-9999}px`;
       } else {
         if (this.currentIndex === slideIndex) {
-          img.style.transform = `scale(1.85)`;
+          img.style.transform = `scale(1.6)`;
           img.style.marginTop = `${20}px`;
         }
         slide.style.opacity = 1;

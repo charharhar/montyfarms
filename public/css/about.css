@@ -456,3 +456,15 @@ section.section.about-view--friends {
     }
   }
 }
+
+@media (max-width: 576px) {
+  section.section.about-view--core {
+    .core-container {
+      justify-content: center;
+
+      .core-contents {
+        flex: 0 1 75%;
+      }
+    }
+  }
+}
