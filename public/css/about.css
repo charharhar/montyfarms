@@ -96,6 +96,26 @@ section.section.about-view--values {
   .values-carousel-section {
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
+
+    .chevron-border {
+      border-color: transparent;
+      height: 60px;
+      width: 60px;
+
+      .chevron {
+        border-color: $main-red;
+      }
+    }
+
+    .carousel-prev {
+      transform: rotate(90deg);
+    }
+
+    .carousel-next {
+      transform: rotate(-90deg);
+    }
   }
 
   .values-carousel-container {
@@ -347,9 +367,19 @@ section.section.about-view--friends {
   }
 }
 
+@media (max-width: 950px) {
+  section.section.about-view--values .values-carousel-section .chevron-border {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   section.section.about-view--values {
     min-height: 720px;
+
+     .values-carousel-section .chevron-border {
+      display: flex;
+     }
 
     .values-carousel-container {
       overflow: hidden;

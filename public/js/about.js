@@ -42,6 +42,8 @@ const carousel = {
     valuesCarousel: document.querySelector('.values-carousel'),
     carouselSlides: sliceArray(document.querySelectorAll('.values-slide')),
     valuesBlurbs: sliceArray(document.querySelectorAll('.values-blurb')),
+    carouselNext: document.querySelector('.carousel-next'),
+    carouselPrev: document.querySelector('.carousel-prev'),
   },
   // Constants
   MULTIPLIERS: [2, 1, 0, -1, -2],
@@ -82,6 +84,14 @@ const carousel = {
 
     this.elem.touchContainer.addEventListener('touchend', event => {
       carousel.handleTouchEnd(event);
+    })
+
+    this.elem.carouselPrev.addEventListener('click', event => {
+      carousel.updateNewSlide(-1);
+    })
+
+    this.elem.carouselNext.addEventListener('click', event => {
+      carousel.updateNewSlide(1);
     })
   },
 
@@ -155,11 +165,22 @@ const carousel = {
   },
 
   updateNewSlide(eventTarget) {
-    const target = findParent(eventTarget, 'values-slide');
-    console.dir(target);
-    const nextIndex = parseInt(target.getAttribute('index'))
-    const nextBlurb = target.getAttribute('data-blurb');
+    let target;
+    let nextIndex;
+    let nextBlurb;
     let nextActiveSlides;
+
+    if (typeof eventTarget === 'object') {
+      target = findParent(eventTarget, 'values-slide');
+      nextIndex = parseInt(target.getAttribute('index'))
+      nextBlurb = target.getAttribute('data-blurb');
+    } else {
+      nextIndex = this.currentIndex + eventTarget;
+      if (nextIndex > 14) { nextIndex = 0 }
+      if (nextIndex < 0) { nextIndex = 14 }
+
+      nextBlurb = document.querySelector(`.values-slide[index="${nextIndex}"]`).getAttribute('data-blurb');
+    }
 
     for (let i = 0; i < this.SLIDES_TO_SHOW; i++) {
       if (nextIndex === 0) {

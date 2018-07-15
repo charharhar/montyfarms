@@ -166,7 +166,7 @@ h3 {
 
 p {
   font-family: $avenir-book;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 
@@ -239,7 +239,7 @@ p {
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 28px;
+    font-size: 42px;
   }
 
   h2 {
@@ -384,7 +384,7 @@ figure {
   p {
     font-family: $futura-med;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 

@@ -40,7 +40,18 @@ slickHelper('#sweetpotatoflour-main', '#sweetpotatoflour-thumbnails')
  * SCROLL ANIMATION HANDLER
  */
 const waypoints = sliceArray(document.querySelectorAll('.waypoint'));
-
+function throttle (callback, limit) {
+  var wait = false;
+  return function () {
+    if (!wait) {
+      callback.call();
+      wait = true;
+      setTimeout(function () {
+          wait = false;
+      }, limit);
+    }
+  }
+}
 window.addEventListener('scroll', e => handleAllAnimations(waypoints))
 window.addEventListener('load', e => handleAllAnimations(waypoints))
 

@@ -20,7 +20,7 @@ section.contact-view--form {
   .dotted-wrapper {
     position: absolute;
     left: 50%;
-    transform: translate(130px, 30px);
+    transform: translate(150px, 30px);
 
     figure {
       width: 150px;
@@ -170,6 +170,10 @@ section.contact-view--images {
 
 @media (max-width: $md-device) {
   section.contact-view--form {
+    .dotted-wrapper {
+      display: none;
+    }
+
     figure.contact-seeds {
       display: none;
     }
