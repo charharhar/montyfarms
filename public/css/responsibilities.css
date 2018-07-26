@@ -3,7 +3,13 @@
 section.section {
 
   .section-container {
-    padding: 15px 0;
+    padding: 0;
+  }
+
+  .heading-block {
+    height: auto;
+    min-height: 340px;
+    padding: 25px 0;
   }
 
   .section-fixed-image {
@@ -15,7 +21,7 @@ section.section {
 
     &.parallax-employees {
       background-image: url(/images/responsibilities/employees-hero.png);
-      background-position: bottom;
+      background-position: 0 130%;
       background-size: contain;
     }
 
@@ -37,6 +43,7 @@ section.section-hero {
   section.section {
     .heading-block {
       height: auto;
+      padding: 15px;
       padding-bottom: 45px;
     }
 

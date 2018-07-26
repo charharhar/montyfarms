@@ -9,7 +9,7 @@ section.section-hero {
 
   .hero-container {
     .heading-underline {
-      max-width: 515px;
+      // max-width: 515px;
     }
   }
 
@@ -74,7 +74,7 @@ section.home-view--about {
 
       h3 {
         position: relative;
-        font-size: 26px;
+        font-size: 30px;
         text-align: center;
         z-index: 2;
 
@@ -129,13 +129,13 @@ section.home-view--about {
             transform: translateX(-50%);
             z-index: 1;
 
-            &#sweetpotato { width: 180px; }
-            &#sweetonion { width: 180px; }
-            &#plantain { width: 180px; }
-            &#cucumber { width: 180px; }
-            &#butternut { width: 70px; }
-            &#potatoflour { width: 180px; }
-            &#juice { width: 130px; }
+            &#sweetpotato { width: 210px; }
+            &#sweetonion { width: 210px; }
+            &#plantain { width: 210px; }
+            &#cucumber { width: 210px; }
+            &#butternut { width: 80px; }
+            &#potatoflour { width: 210px; }
+            &#juice { width: 150px; }
           }
         }
       }
@@ -293,10 +293,21 @@ section.home-view--reachus {
     figure.about-border-blackseed {
       max-width: 200px;
     }
+
     .products-container {
       .product-container {
         h3 {
           font-size: 22px;
+        }
+
+        .products .product figure.product-fruit-img {
+          &#sweetpotato { width: 180px; }
+          &#sweetonion { width: 180px; }
+          &#plantain { width: 180px; }
+          &#cucumber { width: 180px; }
+          &#butternut { width: 70px; }
+          &#potatoflour { width: 180px; }
+          &#juice { width: 130px; }
         }
       }
     }

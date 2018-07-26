@@ -100,12 +100,12 @@ section.section.about-view--values {
     align-items: center;
 
     .chevron-border {
-      border-color: transparent;
+      border-color: $main-white;
       height: 60px;
       width: 60px;
 
       .chevron {
-        border-color: $main-red;
+        border-color: $main-white;
       }
     }
 

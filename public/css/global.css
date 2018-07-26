@@ -178,7 +178,7 @@ p {
 
   .heading-container {
     position: relative;
-    margin: 15px 30px;
+    margin: 15px 0;
 
     &.small-leaf {
       &.white-heading,
@@ -228,7 +228,7 @@ p {
   }
 
   p.heading-blurb {
-    text-align: center;
+    text-align: left;
     max-width: 580px;
 
     &.short {
@@ -312,6 +312,18 @@ a.button {
     &:hover {
       color: $main-white;
       background-color: $main-red;
+    }
+  }
+
+  &.button-white {
+    background-color: $main-white;
+    color: $main-yellow;
+    border-color: $main-yellow;
+
+    &:hover {
+      background-color: $main-yellow;
+      color: $main-white;
+      border-color: $main-yellow;
     }
   }
 }
@@ -427,7 +439,7 @@ nav.main-navigation {
     transform: translateX(-50%);
 
     figure.heading-logo-image {
-      max-width: 50px;
+      max-width: 60px;
     }
   }
 
@@ -801,26 +813,28 @@ section.section-hero {
     .section-heading {
       display: flex;
       flex-flow: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
 
       h1 {
+        text-align: left;
+        font-size: 55px;
         white-space: nowrap;
       }
 
       &.hero-heading {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 15%;
+        transform: translate(-15%, -50%);
       }
     }
 
     .heading-underline {
       position: relative;
       display: flex;
-      justify-content: center;
-      max-width: 420px;
+      justify-content: flex-start;
+      // max-width: 420px;
       width: 100%;
       margin-bottom: 25px;
 
@@ -829,16 +843,15 @@ section.section-hero {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
+        width: 0%;
         height: 2px;
         background-color: $main-white;
         transition: 1000ms all cubic-bezier(.25, .1, .25, 1);
         transition-delay: 500ms;
-        transform: scaleX(0);
       }
 
       &.waypoint.inView:before {
-        transform: scaleX(1);
+        width: 100%;
       }
     }
 
@@ -860,6 +873,11 @@ section.section-hero {
           width: 100%;
           max-width: 320px;
           padding: 0 20px;
+        }
+
+        h1 {
+          font-size: 42px;
+          white-space: normal;
         }
       }
 

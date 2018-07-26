@@ -276,6 +276,7 @@ section.products-view--products {
     &.active {
       position: relative;
       opacity: 1;
+      z-index: 1;
     }
 
     .product-name {

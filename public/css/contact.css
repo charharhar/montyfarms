@@ -1,9 +1,13 @@
 @import 'global';
 
 section.section-hero {
+  min-height: 0;
+  height: 50vh;
+
   .hero-background-container {
     .hero-background-image {
       background-image: url(/images/contact/contact-hero.png);
+      background-position: bottom;
     }
   }
 }
