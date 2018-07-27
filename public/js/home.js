@@ -21,10 +21,25 @@ footerCopyrightYear(footerCopy);
 /**
  * MOBILE NAV HANDLER
  */
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('#mobileNavBtn');
 const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
 mobileNavHandler(hamburger, navigationListWrapper);
+
+/**
+ * SNEAK PEEK HANDLER
+ */
+const sneakBtn = document.querySelector('#sneakBtn');
+const sneakPlay = document.querySelector('#sneakPlay');
+const sneakPopup = document.querySelector('.sneak-popup');
+
+sneakPlay.addEventListener('click', e => {
+  sneakPopup.classList.add('active');
+})
+
+sneakBtn.addEventListener('click', e => {
+  sneakPopup.classList.remove('active');
+})
 
 /**
  * SCROLL ANIMATION HANDLER

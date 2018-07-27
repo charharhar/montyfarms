@@ -20,7 +20,7 @@ footerCopyrightYear(footerCopy);
 /**
  * MOBILE NAV HANDLER
  */
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('#mobileNavBtn');
 const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
 mobileNavHandler(hamburger, navigationListWrapper);
@@ -32,6 +32,34 @@ const waypoints = sliceArray(document.querySelectorAll('.waypoint'));
 
 window.addEventListener('scroll', e => handleAllAnimations(waypoints))
 window.addEventListener('load', e => handleAllAnimations(waypoints))
+
+const hectaresVideo = document.querySelector('#hectares-video');
+const countriesVideo = document.querySelector('#countries-video');
+const cropsVideo = document.querySelector('#crops-video');
+const scaleVideo = document.querySelector('#scale-video');
+
+function checkPlayed(elem) {
+  return isScrolledIntoView(elem) && !elem.classList.contains('active')
+}
+
+window.addEventListener('scroll', e => {
+  if (checkPlayed(hectaresVideo)) {
+    hectaresVideo.play();
+    hectaresVideo.classList.add('active');
+  }
+  if (checkPlayed(countriesVideo)) {
+    countriesVideo.play()
+    countriesVideo.classList.add('active');
+  }
+  if (checkPlayed(cropsVideo)) {
+    cropsVideo.play()
+    cropsVideo.classList.add('active');
+  }
+  if (checkPlayed(scaleVideo)) {
+    scaleVideo.play()
+    scaleVideo.classList.add('active');
+  }
+})
 
 /**
  * 3D CAROUSEL HANDLER

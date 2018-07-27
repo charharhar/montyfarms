@@ -19,7 +19,7 @@ footerCopyrightYear(footerCopy);
 /**
  * MOBILE NAV HANDLER
  */
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('#mobileNavBtn');
 const navigationListWrapper = document.querySelector('.navigation-list-wrapper');
 
 mobileNavHandler(hamburger, navigationListWrapper);

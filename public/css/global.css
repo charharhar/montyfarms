@@ -543,8 +543,10 @@ a.navLink {
     }
 
     .hamburger {
+      position: fixed;
+      top: 25px;
+      right: 0;
       z-index: 1100;
-      margin-top: 25px;
     }
 
     .navigation-list-wrapper {

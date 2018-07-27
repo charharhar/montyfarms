@@ -32,20 +32,24 @@ section.section.about-view--core {
       flex: 0 1 45%;
       margin-bottom: 60px;
 
-      &#core-hectares figure {
-        width: 200px;
+      video {
+        margin-right: 5px;
       }
 
-      &#core-countries figure {
-        width: 95px;
+      video::-webkit-media-controls {
+        display: none;
       }
 
-      &#core-crops figure {
-        width: 90px;
+      &#core-hectares video {
       }
 
-      &#core-scale figure {
-        width: 100px;
+      &#core-countries video {
+      }
+
+      &#core-crops video {
+      }
+
+      &#core-scale video {
       }
 
       .core-blurb {
@@ -463,7 +467,23 @@ section.section.about-view--friends {
       justify-content: center;
 
       .core-contents {
-        flex: 0 1 75%;
+        flex: 0 1 90%;
+
+        &#core-hectares video {
+          width: 120px;
+        }
+
+        &#core-countries video {
+          width: 105px;
+        }
+
+        &#core-crops video {
+          width: 115px;
+        }
+
+        &#core-scale video {
+          width: 105px;
+        }
       }
     }
   }
