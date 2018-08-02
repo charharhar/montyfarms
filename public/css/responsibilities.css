@@ -43,14 +43,26 @@ section.section-hero {
   section.section {
     .heading-block {
       height: auto;
-      padding: 15px;
-      padding-bottom: 45px;
+      padding: 40px 25px;
+      padding-bottom: 55px;
+      min-height: 0;
     }
 
     .section-fixed-image {
       height: auto;
       min-height: 260px;
       background-attachment: initial;
+    }
+  }
+
+  section.section .section-fixed-image.parallax-employees {
+    background-position: center;
+    background-size: cover;
+  }
+
+  section.responsibilities-view--environment {
+    .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
+      right: 10px;
     }
   }
 }

@@ -80,6 +80,10 @@ section.contact-view--form {
           img {
             margin-right: 8px;
           }
+
+          span {
+            font-weight: 600;
+          }
         }
       }
     }
@@ -206,6 +210,11 @@ section.contact-view--images {
         padding: 0;
       }
 
+      .section-heading a {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
       .form-container .contact-info {
         position: relative;
         top: 0;
@@ -213,8 +222,15 @@ section.contact-view--images {
         align-items: center;
         margin: 25px 0;
 
-        .contact:last-of-type {
-          margin-bottom: 0;
+        .contact {
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          span {
+            font-weight: 600;
+            font-size: 14px;
+          }
         }
       }
 

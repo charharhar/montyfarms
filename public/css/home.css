@@ -441,6 +441,10 @@ section.home-view--reachus {
 }
 
 @media (max-width: 576px) {
+  .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
+    right: 70px;
+  }
+
   nav.main-navigation .navigation-logo-wrapper figure.heading-logo-image {
     max-width: 80px;
   }
@@ -466,6 +470,10 @@ section.home-view--reachus {
       .product-container {
         flex: 0 1 100%;
 
+        &:nth-of-type(1) {
+          margin-bottom: 50px;
+        }
+
         h3 {
           font-size: 20px;
         }
@@ -490,13 +498,13 @@ section.home-view--reachus {
 
             figure.product-fruit-img {
 
-              &#sweetpotato { width: 130px; }
-              &#sweetonion { width: 130px; }
-              &#plantain { width: 130px; }
-              &#cucumber { width: 130px; }
-              &#butternut { width: 40px; }
-              &#potatoflour { width: 130px; }
-              &#juice { width: 75px; }
+              &#sweetpotato { width: 155px; }
+              &#sweetonion { width: 155px; }
+              &#plantain { width: 155px; }
+              &#cucumber { width: 155px; }
+              &#butternut { width: 48px; }
+              &#potatoflour { width: 155px; }
+              &#juice { width: 90px; }
             }
           }
         }

@@ -427,7 +427,7 @@ section.section.about-view--friends {
           font-size: 18px;
         }
         p {
-          font-size: 11px;
+          font-size: 13px;
         }
       }
     }
@@ -468,6 +468,10 @@ section.section.about-view--friends {
 
       .core-contents {
         flex: 0 1 90%;
+
+        .core-blurb p {
+          font-size: 15px;
+        }
 
         &#core-hectares video {
           width: 120px;
