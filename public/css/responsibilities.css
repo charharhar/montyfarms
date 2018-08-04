@@ -13,16 +13,19 @@ section.section {
   }
 
   .section-fixed-image {
+    position: static;
     height: 66vh;
     max-height: 468px;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+
     &.parallax-community {
       background-image: url(/images/responsibilities/community-hero.png);
     }
 
     &.parallax-employees {
       background-image: url(/images/responsibilities/employees-hero.png);
-      background-position: 0 130%;
-      background-size: contain;
+      background-position: 50% 315px;
     }
 
     &.parallax-environment {

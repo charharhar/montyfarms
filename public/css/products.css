@@ -298,7 +298,7 @@ section.products-view--products {
 
     .product-name {
       h3 {
-        font-size: 62px;
+        font-size: 32px;
         text-align: center;
         margin: 45px 0 0;
       }
@@ -309,18 +309,19 @@ section.products-view--products {
       align-items: center;
       justify-content: center;
       flex-flow: column nowrap;
-      width: 80%;
+      width: 100%;
       margin: 30px auto;
+      padding: 0 50px;
 
       .product-hero-img {
-        flex: 0 1 100%;
+        width: 100%;
         order: 2;
       }
 
       .product-text {
         display: flex;
-        justify-content: center;
-        flex: 0 1 100%;
+        justify-content: space-between;
+        width: 100%;
         order: 1;
       }
 
@@ -433,8 +434,7 @@ section.products-view--products {
           }
 
           b {
-            font-weight: 600;
-            font-size: 14px;
+            font-family: $avenir-black;
           }
         }
       }
@@ -505,7 +505,6 @@ section.products-view--process {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 200px;
     transform: translateX(-45%) rotate(180deg);
   }
 
@@ -513,28 +512,19 @@ section.products-view--process {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
-    width: 561px;
+    width: 560px;
     margin: 0 auto;
 
     .process-image-container {
       width: 50%;
       padding-top: 60px;
-
-      figure {
-        margin: 0 auto 55px;
-        width: 140px;
-        height: 140px;
-
-        img {
-          height: 100%;
-        }
-      }
     }
 
     .process-content-container {
       position: relative;
       width: 50%;
       padding-top: 60px;
+      margin-left: 50%;
 
       &:before {
         content: '';
@@ -551,8 +541,12 @@ section.products-view--process {
         position: relative;
         padding: 20px 0 20px 40px;
 
-        &.inView:before {
-          opacity: 1;
+        &.inView {
+          &:before,
+          figure.product-content-image {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         &:before {
@@ -571,6 +565,22 @@ section.products-view--process {
 
         h3 {
           margin-bottom: 20px;
+        }
+
+        figure.product-content-image {
+          position: absolute;
+          width: 140px;
+          height: 140px;
+          top: 20px;
+          left: -100%;
+          margin-left: 25%;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: 1000ms all ease;
+
+          img {
+            height: 100%;
+          }
         }
       }
     }
@@ -605,30 +615,18 @@ section.products-view--process {
   section.products-view--process {
 
     .process-container {
-      width: 345px;
-
-      .process-image-container {
-        width: 40%;
-
-        figure {
-          max-width: 100px;
-
-          &:nth-of-type(1) {
-            margin-bottom: 20px;
-          }
-
-          &:nth-of-type(2) {
-            margin-bottom: 60px;
-          }
-
-          &:nth-of-type(3) {
-            margin-bottom: 110px;
-          }
-        }
-      }
+      width: 100%;
 
       .process-content-container {
         width: 60%;
+        margin-left: 40%;
+
+        .process-content figure.product-content-image {
+          margin-left: 20%;
+          left: -66.666%;
+          width: 100px;
+          height: 100px;
+        }
       }
     }
   }
@@ -694,6 +692,7 @@ section.products-view--process {
 
       .product-hero {
         width: 100%;
+        padding: 0;
 
         .product-hero-img {
           flex: 0 1 100%;
@@ -822,6 +821,30 @@ section.products-view--process {
           .slick-slide {
             padding: 5px;
           }
+        }
+      }
+    }
+  }
+
+  section.products-view--process {
+
+    .process-container {
+      .process-content-container {
+        .process-content figure.product-content-image {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  section.products-view--process {
+    .process-container {
+      .process-content-container {
+        .process-content figure.product-content-image {
+          margin-left: 10%;
         }
       }
     }

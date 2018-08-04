@@ -67,14 +67,24 @@ const pinappleBtn = document.querySelector('#pinappleBtn');
 const sweetpotatoflourBtn = document.querySelector('#sweetpotatoflourBtn');
 const buttonImg = sliceArray(document.querySelectorAll('.button-img'))
 
-const plantainContainer = document.querySelector('#plantainContainer');
-const cucumberContainer = document.querySelector('#cucumberContainer');
-const butternutContainer = document.querySelector('#butternutContainer');
-const onionContainer = document.querySelector('#onionContainer');
-const sweetpotatoContainer = document.querySelector('#sweetpotatoContainer');
-const pineappleContainer = document.querySelector('#pineappleContainer');
-const sweetpotatoflourContainer = document.querySelector('#sweetpotatoflourContainer');
+const plantain = document.querySelector('#plantain');
+const cucumber = document.querySelector('#cucumber');
+const butternut = document.querySelector('#butternut');
+const onion = document.querySelector('#onion');
+const sweetpotato = document.querySelector('#sweetpotato');
+const pineapple = document.querySelector('#pineapple');
+const sweetpotatoflour = document.querySelector('#sweetpotatoflour');
 const productsContainer = sliceArray(document.querySelectorAll('.product-content-container'))
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  const hash = window.location.hash;
+
+  if (hash) {
+    document.querySelector(hash).classList.add('active');
+  } else {
+    plantain.classList.add('active');
+  }
+});
 
 plantainBtn.addEventListener('click', e => {
   buttonImg.forEach(btn => {
@@ -84,7 +94,7 @@ plantainBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   plantainBtn.classList.add('active');
-  plantainContainer.classList.add('active');
+  plantain.classList.add('active');
 })
 
 cucumberBtn.addEventListener('click', e => {
@@ -95,7 +105,7 @@ cucumberBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   cucumberBtn.classList.add('active');
-  cucumberContainer.classList.add('active');
+  cucumber.classList.add('active');
 })
 
 butternutBtn.addEventListener('click', e => {
@@ -106,7 +116,7 @@ butternutBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   butternutBtn.classList.add('active');
-  butternutContainer.classList.add('active');
+  butternut.classList.add('active');
 })
 
 onionBtn.addEventListener('click', e => {
@@ -117,7 +127,7 @@ onionBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   onionBtn.classList.add('active');
-  onionContainer.classList.add('active');
+  onion.classList.add('active');
 })
 
 sweetpotatoBtn.addEventListener('click', e => {
@@ -128,7 +138,7 @@ sweetpotatoBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   sweetpotatoBtn.classList.add('active');
-  sweetpotatoContainer.classList.add('active');
+  sweetpotato.classList.add('active');
 })
 
 pineappleBtn.addEventListener('click', e => {
@@ -139,7 +149,7 @@ pineappleBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   pineappleBtn.classList.add('active');
-  pineappleContainer.classList.add('active');
+  pineapple.classList.add('active');
 })
 
 sweetpotatoflourBtn.addEventListener('click', e => {
@@ -150,7 +160,7 @@ sweetpotatoflourBtn.addEventListener('click', e => {
     container.classList.remove('active');
   })
   sweetpotatoflourBtn.classList.add('active');
-  sweetpotatoflourContainer.classList.add('active');
+  sweetpotatoflour.classList.add('active');
 })
 
 hotReload();

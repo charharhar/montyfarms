@@ -15,9 +15,15 @@
   src: url('../fonts/avenir-book.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Avenir-Black';
+  src: url('../fonts/avenir-black.ttf') format('truetype');
+}
+
 $futura-bold: 'Futura-CondensedBold', 'Arial', sans-serif;
 $futura-med: 'Futura-CondensedMedium', 'Arial', sans-serif;
 $avenir-book: 'Avenir-Book', 'Arial', sans-serif;
+$avenir-black: 'Avenir-Black', 'Arial', sans-serif;
 
 $main-white: #ffffff;
 $main-black: #222;

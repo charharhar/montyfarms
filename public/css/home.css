@@ -97,12 +97,17 @@ section.home-view--about {
 
         .product {
           position: relative;
+          display: block;
           width: 30%;
           margin-right: 5%;
           margin-bottom: 20px;
 
           &:nth-of-type(3n) {
             margin-right: 0;
+          }
+
+          &:hover figure.product-fruit-img {
+            transform: translateX(-50%) scale(1.1);
           }
 
           .product-content {
@@ -124,10 +129,11 @@ section.home-view--about {
 
           figure.product-fruit-img {
             position: absolute;
-            bottom: 0;
             left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
             z-index: 1;
+            transform: translateX(-50%);
+            transition: 300ms all ease;
 
             &#sweetpotato { width: 210px; }
             &#sweetonion { width: 210px; }
