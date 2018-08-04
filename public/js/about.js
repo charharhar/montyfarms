@@ -210,8 +210,6 @@ const carousel = {
       nextBlurb = document.querySelector(`.values-slide[index="${nextIndex}"]`).getAttribute('data-blurb');
     }
 
-    console.log(nextIndex);
-
     for (let i = 0; i < this.SLIDES_TO_SHOW; i++) {
       if (nextIndex === 0) {
         nextActiveSlides = [13, 14, 0, 1, 2]

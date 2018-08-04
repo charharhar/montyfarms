@@ -292,8 +292,8 @@ section.section.about-view--people {
         margin: 0 auto 15px;
       }
       p {
-        text-align: center;
-        font-size: 11px;
+        text-align: left;
+        font-size: 12px;
         color: $main-white;
       }
     }
