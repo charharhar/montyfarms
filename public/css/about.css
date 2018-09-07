@@ -40,16 +40,20 @@ section.section.about-view--core {
         display: none;
       }
 
-      &#core-hectares video {
+      &#core-hectares figure {
+        width: 200px;
       }
 
-      &#core-countries video {
+      &#core-countries figure {
+        width: 95px;
       }
 
-      &#core-crops video {
+      &#core-crops figure {
+        width: 90px;
       }
 
-      &#core-scale video {
+      &#core-scale figure {
+        width: 100px;
       }
 
       .core-blurb {
@@ -209,8 +213,9 @@ section.section.about-view--values {
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      max-width: 500px;
+      max-width: 520px;
       padding: 15px;
+      text-align: justify;
       transition-duration: 0ms;
       transition-property: all;
       transition-timing-function: ease-out;
@@ -475,19 +480,19 @@ section.section.about-view--friends {
           font-size: 15px;
         }
 
-        &#core-hectares video {
+        &#core-hectares figure {
           width: 120px;
         }
 
-        &#core-countries video {
+        &#core-countries figure {
           width: 105px;
         }
 
-        &#core-crops video {
+        &#core-crops figure {
           width: 115px;
         }
 
-        &#core-scale video {
+        &#core-scale figure {
           width: 105px;
         }
       }

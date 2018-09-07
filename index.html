@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monty Farms</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #desktop_monty {
+            display: block;
+        }
+        #mobile_monty {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #desktop_monty {
+                display: none;
+            }
+            #mobile_monty {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="montyfarm.jpg" alt="">
+    <img id="mobile_monty" src="montyfarm.jpg" alt="">
+</body>
+</html>

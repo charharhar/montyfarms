@@ -58,7 +58,7 @@ section.contact-view--form {
 
     .form-container {
       position: relative;
-      max-width: 400px;
+      max-width: 520px;
       width: 100%;
       margin: 0 auto;
 
@@ -89,7 +89,7 @@ section.contact-view--form {
     }
 
     form {
-      max-width: 400px;
+      max-width: 520px;
       margin: 30px auto;
 
       p {
@@ -145,6 +145,8 @@ section.contact-view--images {
     justify-content: space-between;
     align-items: center;
     padding: 30px 50px;
+    max-width: 1080px;
+    margin: 0 auto;
 
     figure {
       position: relative;
@@ -178,32 +180,34 @@ section.contact-view--images {
 
 @media (max-width: $md-device) {
   section.contact-view--form {
-    .dotted-wrapper {
+    figure.contact-seeds {
       display: none;
     }
 
-    figure.contact-seeds {
-      display: none;
+    .section-container {
+      .form-container {
+        max-width: 420px;
+
+        form {
+          max-width: 420px;
+        }
+      }
     }
   }
 }
 
-@media (max-width: $xs-device) {
-  section.contact-view--images {
-    .section-container {
-      flex-flow: column;
-      padding: 15px;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
+@media (max-width: $sm-device) {
+  section.contact-view--form {
+    .dotted-wrapper {
+      p {
+        transform: translate(105px, -25px);
+      }
 
       figure {
-        margin: 10px auto;
+        width: 100px;
       }
     }
-  }
 
-  section.contact-view--form {
     .section-container {
       .heading-block {
         height: auto;
@@ -236,6 +240,30 @@ section.contact-view--images {
 
       form {
         margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  section.contact-view--form {
+    .dotted-wrapper {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $xs-device) {
+  section.contact-view--images {
+    .section-container {
+      flex-flow: column;
+      padding: 15px;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+
+      figure {
+        margin: 10px auto;
       }
     }
   }

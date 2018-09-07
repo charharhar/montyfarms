@@ -139,7 +139,7 @@ section.home-view--about {
             &#sweetonion { width: 210px; }
             &#plantain { width: 210px; }
             &#cucumber { width: 210px; }
-            &#butternut { width: 80px; }
+            &#butternut { width: 150px; }
             &#potatoflour { width: 210px; }
             &#juice { width: 150px; }
           }
@@ -341,12 +341,8 @@ section.home-view--reachus {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   section.home-view--about {
-    figure.about-border-blackseed {
-      max-width: 200px;
-    }
-
     .products-container {
       .product-container {
         h3 {
@@ -358,9 +354,39 @@ section.home-view--reachus {
           &#sweetonion { width: 180px; }
           &#plantain { width: 180px; }
           &#cucumber { width: 180px; }
-          &#butternut { width: 70px; }
+          &#butternut { width: 130px; }
           &#potatoflour { width: 180px; }
           &#juice { width: 130px; }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  section.home-view--about {
+    figure.about-border-blackseed {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  section.home-view--about {
+    .products-container {
+      .product-container {
+        h3 {
+          font-size: 20px;
+        }
+
+        .products .product figure.product-fruit-img {
+          &#sweetpotato { width: 150px; }
+          &#sweetonion { width: 150px; }
+          &#plantain { width: 150px; }
+          &#cucumber { width: 150px; }
+          &#butternut { width: 110px; }
+          &#potatoflour { width: 150px; }
+          &#juice { width: 110px; }
         }
       }
     }
@@ -377,7 +403,7 @@ section.home-view--reachus {
     }
 
     figure.about-border-yellowseed {
-      max-width: 80px;
+      max-width: 160px;
     }
 
     figure.about-border-leaf {
@@ -390,14 +416,12 @@ section.home-view--reachus {
       .product-container {
         flex: 0 1 100%;
 
-        h3 {
-        }
-
         .products {
 
           .product {
             width: 35%;
             margin-right: 10%;
+            margin-bottom: 25px;
 
             &:nth-of-type(3) {
               margin-right: 10%;
@@ -411,7 +435,11 @@ section.home-view--reachus {
               margin-right: 0;
             }
 
-            figure.product-fruit-img {
+            figure.product-cup-img {
+              max-height: 180px;
+              img {
+                max-height: 180px;
+              }
             }
           }
         }
@@ -447,12 +475,18 @@ section.home-view--reachus {
 }
 
 @media (max-width: 576px) {
-  .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
-    right: 70px;
-  }
-
   nav.main-navigation .navigation-logo-wrapper figure.heading-logo-image {
     max-width: 80px;
+  }
+
+  section.section-hero .chevron-border {
+    bottom: 20px;
+  }
+
+  section.home-view--hero {
+    .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
+      right: 0;
+    }
   }
 
   section.home-view--about {
@@ -477,11 +511,15 @@ section.home-view--reachus {
         flex: 0 1 100%;
 
         &:nth-of-type(1) {
-          margin-bottom: 50px;
+          margin-bottom: 30px;
+        }
+
+        h2 {
+          margin-bottom: 20px;
         }
 
         h3 {
-          font-size: 20px;
+          font-size: 16px;
         }
 
         .products {
@@ -504,12 +542,12 @@ section.home-view--reachus {
 
             figure.product-fruit-img {
 
-              &#sweetpotato { width: 155px; }
-              &#sweetonion { width: 155px; }
-              &#plantain { width: 155px; }
-              &#cucumber { width: 155px; }
-              &#butternut { width: 48px; }
-              &#potatoflour { width: 155px; }
+              &#sweetpotato { width: 110px; }
+              &#sweetonion { width: 110px; }
+              &#plantain { width: 110px; }
+              &#cucumber { width: 110px; }
+              &#butternut { width: 90px; }
+              &#potatoflour { width: 110px; }
               &#juice { width: 90px; }
             }
           }

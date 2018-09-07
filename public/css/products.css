@@ -325,6 +325,13 @@ section.products-view--products {
         order: 1;
       }
 
+      h3.product-hero-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+      }
+
       .product-hero-text {
         transition: 1000ms all ease;
 
@@ -658,6 +665,17 @@ section.products-view--process {
     .products-buttons {
       .dotted-wrapper {
         display: none;
+      }
+    }
+
+    .product-content-container {
+      .product-hero {
+        .product-text {
+
+          h3.product-hero-text {
+            font-size: 28px;
+          }
+        }
       }
     }
   }
