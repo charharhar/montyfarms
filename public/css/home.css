@@ -11,6 +11,15 @@ section.section-hero {
     .heading-underline {
       // max-width: 515px;
     }
+
+    .section-heading.hero-heading {
+      top: 40%;
+      transform: translate(-15%, -40%);
+    }
+
+    .hero-logo {
+      max-width: 120px;
+    }
   }
 
   .chevron-border {
@@ -394,6 +403,11 @@ section.home-view--reachus {
 }
 
 @media (max-width: 768px) {
+  nav.main-navigation {
+    .navigation-logo-wrapper {
+      display: none;
+    }
+  }
 
   section.home-view--about {
     figure.about-border-blackseed {
@@ -479,6 +493,10 @@ section.home-view--reachus {
     max-width: 80px;
   }
 
+  section.section-hero .hero-container .hero-logo {
+    max-width: 80px;
+  }
+
   section.section-hero .chevron-border {
     bottom: 20px;
   }
@@ -554,5 +572,11 @@ section.home-view--reachus {
         }
       }
     }
+  }
+}
+
+@media (max-width: 320px) {
+  section.section-hero .hero-container .hero-logo {
+    max-width: 60px;
   }
 }

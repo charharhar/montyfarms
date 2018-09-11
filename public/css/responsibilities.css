@@ -64,8 +64,5 @@ section.section-hero {
   }
 
   section.responsibilities-view--environment {
-    .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
-      right: 10px;
-    }
   }
 }

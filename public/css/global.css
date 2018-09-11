@@ -234,7 +234,7 @@ p {
   }
 
   p.heading-blurb {
-    text-align: left;
+    text-align: justify;
     max-width: 580px;
 
     &.short {
@@ -437,11 +437,26 @@ nav.main-navigation {
   align-items: center;
   justify-content: center;
 
+  &.sticky-nav {
+    position: fixed;
+    transform: translateY(-100%);
+
+    &.sticky-nav-active {
+      transform: translateY(0);
+      transition: 400ms all ease;
+    }
+
+    .navigation-logo-wrapper {
+      display: block;
+    }
+  }
+
   .navigation-logo-wrapper {
     position: absolute;
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
 
     figure.heading-logo-image {
       max-width: 60px;
@@ -540,6 +555,14 @@ a.navLink {
     justify-content: space-between;
     align-items: flex-start;
     height: auto;
+
+    &.sticky-nav {
+      position: fixed;
+      transform: translateY(0);
+
+      &.sticky-nav-active {
+      }
+    }
 
     .hamburger,
     .navigation-logo-wrapper {
