@@ -378,6 +378,17 @@ section.section.about-view--friends {
   }
 }
 
+@media (max-width: 1024px) {
+  section.section.about-view--friends {
+    min-height: auto;
+
+    .section-container {
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
+  }
+}
+
 @media (max-width: 950px) {
   section.section.about-view--values .values-carousel-section .chevron-border {
     display: none;
@@ -385,6 +396,12 @@ section.section.about-view--friends {
 }
 
 @media (max-width: 768px) {
+  section.section.about-view--core {
+    .core-container {
+      padding-left: 25px;
+    }
+  }
+
   section.section.about-view--values {
     min-height: 720px;
 
@@ -448,10 +465,14 @@ section.section.about-view--friends {
     max-width: none;
 
     .certif-icon {
-      flex: 0 1 25%;
+      flex: 0 1 16%;
       margin-right: 5%;
       max-width: 130px;
       margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }

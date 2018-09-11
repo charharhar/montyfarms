@@ -17,8 +17,16 @@
     slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: main,
-    dots: true,
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   })
  }
 

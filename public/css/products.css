@@ -510,7 +510,7 @@ section.products-view--products {
 section.products-view--process {
   figure.about-border-yellowseed {
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     transform: translateX(-45%) rotate(180deg);
   }
@@ -643,7 +643,30 @@ section.products-view--process {
   section.products-view--products {
     .products-buttons {
       .dotted-wrapper {
-        display: none;
+        figure {
+          width: 100px;
+          margin-left: auto;
+        }
+
+        p {
+          transform: translateX(-80%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  section.products-view--products {
+    .products-buttons {
+      .dotted-wrapper {
+        figure {
+          transform: rotateX(180deg);
+        }
+
+        p {
+          transform: translate(15px, -70px);
+        }
       }
     }
   }
@@ -660,12 +683,6 @@ section.products-view--process {
   section.products-view--products {
     .section-container {
       padding-top: 50px;
-    }
-
-    .products-buttons {
-      .dotted-wrapper {
-        display: none;
-      }
     }
 
     .product-content-container {
@@ -687,8 +704,18 @@ section.products-view--process {
     }
 
     figure.about-border-yellowseed {
-      max-width: 100px;
+      max-width: 180px;
       top: -30px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  section.products-view--products {
+    .products-buttons {
+      .dotted-wrapper {
+        display: none;
+      }
     }
   }
 }
@@ -756,7 +783,7 @@ section.products-view--process {
             &:checked {
               & + label {
                 color: $main-white;
-                padding: 20px 30px 0 30px;
+                padding: 20px 20px 0 20px;
               }
 
               & ~ .content-text {
@@ -776,7 +803,7 @@ section.products-view--process {
             display: block;
             color: $main-white;
             font-size: 32px;
-            padding: 0 30px;
+            padding: 0 20px;
             z-index: 2;
 
             &:after {
@@ -809,10 +836,11 @@ section.products-view--process {
             width: auto;
             max-height: 0;
             overflow: hidden;
+            z-index: 2;
 
             h3, p {
               color: $main-white;
-              padding-left: 30px;
+              padding: 0 20px;
             }
           }
         }
@@ -826,12 +854,9 @@ section.products-view--process {
 
           .slick-prev,
           .slick-next {
-            bottom: -18px;
+            bottom: -25px;
             top: auto;
             transform: translateY(100%) scale(.7);
-            .chevron-border {
-              border-color: transparent;
-            }
           }
         }
 
@@ -845,6 +870,10 @@ section.products-view--process {
   }
 
   section.products-view--process {
+    figure.about-border-yellowseed {
+      max-width: 100px;
+      top: 100px;
+    }
 
     .process-container {
       .process-content-container {

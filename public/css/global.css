@@ -245,7 +245,7 @@ p {
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   h2 {
@@ -622,6 +622,11 @@ a.navLink {
   &.leftToRightSpecial-hidden {
     transform: translateX(-100%);
   }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: '';
 }
 
 /*

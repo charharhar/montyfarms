@@ -28,13 +28,15 @@ mobileNavHandler(hamburger, navigationListWrapper);
 /**
  * SLIDER HANDLER
  */
-slickHelper('#plantain-main', '#plantain-thumbnails')
-slickHelper('#cucumber-main', '#cucumber-thumbnails')
-slickHelper('#butternut-main', '#butternut-thumbnails')
-slickHelper('#onion-main', '#onion-thumbnails')
-slickHelper('#sweetpotato-main', '#sweetpotato-thumbnails')
-slickHelper('#pineapple-main', '#pineapple-thumbnails')
-slickHelper('#sweetpotatoflour-main', '#sweetpotatoflour-thumbnails')
+window.addEventListener('load', () => {
+  slickHelper('#plantain-main', '#plantain-thumbnails')
+  slickHelper('#cucumber-main', '#cucumber-thumbnails')
+  slickHelper('#butternut-main', '#butternut-thumbnails')
+  slickHelper('#onion-main', '#onion-thumbnails')
+  slickHelper('#sweetpotato-main', '#sweetpotato-thumbnails')
+  slickHelper('#pineapple-main', '#pineapple-thumbnails')
+  slickHelper('#sweetpotatoflour-main', '#sweetpotatoflour-thumbnails')
+})
 
 /**
  * SCROLL ANIMATION HANDLER
