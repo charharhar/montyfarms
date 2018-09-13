@@ -105,8 +105,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   if (hash) {
     document.querySelector(hash).classList.add('active');
+    document.querySelector(`${hash}Btn`).classList.add('active');
   } else {
     plantain.classList.add('active');
+    plantainBtn.classList.add('active');
   }
 });
 

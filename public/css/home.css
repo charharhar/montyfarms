@@ -226,6 +226,7 @@ section.home-view--sneak {
     cursor: pointer;
     transition: 200ms all ease;
     animation: blinking 2s linear infinite;
+    transform: scale(1.7);
 
     svg {
       fill: none;
@@ -403,17 +404,13 @@ section.home-view--reachus {
 }
 
 @media (max-width: 768px) {
-  nav.main-navigation {
-    .navigation-logo-wrapper {
-      display: none;
-    }
+  nav.main-navigation .navigation-logo-wrapper {
+    display: none;
   }
 
   section.home-view--about {
     figure.about-border-blackseed {
-      left: 5%;
-      transform: translateY(-50%);
-      max-width: 80px;
+      max-width: 150px;
     }
 
     figure.about-border-yellowseed {
@@ -499,6 +496,7 @@ section.home-view--reachus {
 
   section.section-hero .chevron-border {
     bottom: 20px;
+    padding: 10px;
   }
 
   section.home-view--hero {
@@ -509,8 +507,6 @@ section.home-view--reachus {
 
   section.home-view--about {
     figure.about-border-blackseed {
-      left: 5%;
-      transform: translateY(-50%);
       max-width: 80px;
     }
 
@@ -572,6 +568,10 @@ section.home-view--reachus {
         }
       }
     }
+  }
+
+  section.home-view--sneak .sneak-play-container {
+    transform: scale(1.4);
   }
 }
 

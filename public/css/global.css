@@ -172,7 +172,7 @@ h3 {
 
 p {
   font-family: $avenir-book;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -234,12 +234,18 @@ p {
   }
 
   p.heading-blurb {
-    text-align: justify;
+    text-align: left;
     max-width: 580px;
 
     &.short {
       max-width: 380px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
   }
 }
 
@@ -550,6 +556,10 @@ a.navLink {
 }
 
 @media (max-width: 768px) {
+  nav.main-navigation.sticky-nav .navigation-logo-wrapper {
+    display: none;
+  }
+
   nav.main-navigation {
     background-color: transparent;
     justify-content: space-between;
@@ -558,9 +568,10 @@ a.navLink {
 
     &.sticky-nav {
       position: fixed;
-      transform: translateY(0);
+      transform: initial;
 
       &.sticky-nav-active {
+        transform: initial;
       }
     }
 
