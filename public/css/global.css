@@ -153,6 +153,11 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
+
+  a {
+    color: $main-green;
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -263,7 +268,7 @@ p {
   }
 
   p {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .section-heading {
@@ -281,6 +286,16 @@ p {
         }
       }
     }
+  }
+}
+
+span.br {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  span.br {
+    display: block;
   }
 }
 
@@ -560,6 +575,10 @@ a.navLink {
     display: none;
   }
 
+  nav.main-navigation .navigation-logo-wrapper {
+    display: none;
+  }
+
   nav.main-navigation {
     background-color: transparent;
     justify-content: space-between;
@@ -577,12 +596,12 @@ a.navLink {
 
     .hamburger,
     .navigation-logo-wrapper {
-      display: block;
       margin: 15px 25px;
     }
 
     .hamburger {
       position: fixed;
+      display: block;
       top: 25px;
       right: 0;
       z-index: 1100;
@@ -856,6 +875,10 @@ section.section-hero {
     height: 100%;
     width: 100%;
 
+    .hero-logo {
+      max-width: 120px;
+    }
+
     .section-heading {
       display: flex;
       flex-flow: column;
@@ -870,9 +893,9 @@ section.section-hero {
 
       &.hero-heading {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 15%;
-        transform: translate(-15%, -50%);
+        transform: translate(-15%, -40%);
       }
     }
 
@@ -914,11 +937,17 @@ section.section-hero {
 
     .hero-container {
 
+      .hero-logo {
+        max-width: 80px;
+      }
+
       .section-heading {
         &.hero-heading {
           width: 100%;
           max-width: 320px;
           padding: 0 20px;
+          top: 38%;
+          transform: translate(-15%, -50%);
         }
 
         h1 {
@@ -991,6 +1020,12 @@ footer.section-footer {
       text-transform: uppercase;
       text-align: center;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  section.section-hero .hero-container .hero-logo {
+    max-width: 60px;
   }
 }
 

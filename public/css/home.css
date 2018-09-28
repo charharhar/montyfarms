@@ -11,15 +11,6 @@ section.section-hero {
     .heading-underline {
       // max-width: 515px;
     }
-
-    .section-heading.hero-heading {
-      top: 40%;
-      transform: translate(-15%, -40%);
-    }
-
-    .hero-logo {
-      max-width: 120px;
-    }
   }
 
   .chevron-border {
@@ -86,11 +77,12 @@ section.home-view--about {
         font-size: 30px;
         text-align: center;
         z-index: 2;
+        line-height: 100%;
 
         &:before {
           content: '';
           position: absolute;
-          top: -20px;
+          top: -10px;
           left: 50%;
           width: 24px;
           height: 3px;
@@ -122,7 +114,7 @@ section.home-view--about {
           .product-content {
             display: flex;
             flex-flow: column;
-            padding-top: 40px;
+            padding-top: 30px;
             position: absolute;
             top: 0;
             left: 0;
@@ -285,6 +277,7 @@ section.home-view--findus {
 
       img {
         height: 50px;
+        transform: scale(1.6);
       }
     }
   }
@@ -351,7 +344,7 @@ section.home-view--reachus {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   section.home-view--about {
     .products-container {
       .product-container {
@@ -381,7 +374,7 @@ section.home-view--reachus {
   }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 950px) {
   section.home-view--about {
     .products-container {
       .product-container {
@@ -403,11 +396,29 @@ section.home-view--reachus {
   }
 }
 
-@media (max-width: 768px) {
-  nav.main-navigation .navigation-logo-wrapper {
-    display: none;
-  }
+@media (max-width: 820px) {
+  section.home-view--about {
+    .products-container {
+      .product-container {
+        h3 {
+          font-size: 16px;
+        }
 
+        .products .product figure.product-fruit-img {
+          &#sweetpotato { width: 130px; }
+          &#sweetonion { width: 130px; }
+          &#plantain { width: 130px; }
+          &#cucumber { width: 130px; }
+          &#butternut { width: 90px; }
+          &#potatoflour { width: 130px; }
+          &#juice { width: 90px; }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
   section.home-view--about {
     figure.about-border-blackseed {
       max-width: 150px;
@@ -447,9 +458,9 @@ section.home-view--reachus {
             }
 
             figure.product-cup-img {
-              max-height: 180px;
+              max-height: 140px;
               img {
-                max-height: 180px;
+                max-height: 140px;
               }
             }
           }
@@ -470,11 +481,13 @@ section.home-view--reachus {
 
         img {
           height: 50px;
+          transform: scale(1.4);
         }
       }
 
       .section-heading {
         flex-basis: 100%;
+        margin-bottom: 30px;
       }
     }
   }
@@ -490,10 +503,6 @@ section.home-view--reachus {
     max-width: 80px;
   }
 
-  section.section-hero .hero-container .hero-logo {
-    max-width: 80px;
-  }
-
   section.section-hero .chevron-border {
     bottom: 20px;
     padding: 10px;
@@ -501,7 +510,8 @@ section.home-view--reachus {
 
   section.home-view--hero {
     .section-heading .heading-container.white-heading:before, .section-heading .heading-container.green-heading:before {
-      right: 0;
+      top: 43px;
+      right: 45px;
     }
   }
 
@@ -556,13 +566,13 @@ section.home-view--reachus {
 
             figure.product-fruit-img {
 
-              &#sweetpotato { width: 110px; }
-              &#sweetonion { width: 110px; }
-              &#plantain { width: 110px; }
-              &#cucumber { width: 110px; }
+              &#sweetpotato { width: 140px; }
+              &#sweetonion { width: 140px; }
+              &#plantain { width: 140px; }
+              &#cucumber { width: 140px; }
               &#butternut { width: 90px; }
-              &#potatoflour { width: 110px; }
-              &#juice { width: 90px; }
+              &#potatoflour { width: 140px; }
+              &#juice { width: 80px; }
             }
           }
         }
@@ -572,11 +582,5 @@ section.home-view--reachus {
 
   section.home-view--sneak .sneak-play-container {
     transform: scale(1.4);
-  }
-}
-
-@media (max-width: 320px) {
-  section.section-hero .hero-container .hero-logo {
-    max-width: 60px;
   }
 }

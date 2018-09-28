@@ -78,7 +78,7 @@ section.section.about-view--core {
         }
 
         p {
-          font-family: $futura-med;
+          // font-family: $futura-med;
         }
       }
     }
@@ -211,9 +211,9 @@ section.section.about-view--values {
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      max-width: 520px;
+      max-width: 485px;
       padding: 15px;
-      text-align: justify;
+      text-align: left;
       transition-duration: 0ms;
       transition-property: all;
       transition-timing-function: ease-out;
@@ -290,13 +290,13 @@ section.section.about-view--people {
         font-family: $futura-med;
         text-align: center;
         color: orange;
-        font-size: 20px;
+        font-size: 22px;
         max-width: 180px;
         margin: 0 auto 15px;
       }
       p {
         text-align: left;
-        font-size: 12px;
+        font-size: 15px;
         color: $main-white;
       }
     }
@@ -364,6 +364,7 @@ section.section.about-view--friends {
       display: flex;
       margin-bottom: 30px;
       flex: 0 1 20%;
+      padding: 0 3px;
 
       &:nth-of-type(5n) {
         margin-right: 0;
@@ -371,6 +372,7 @@ section.section.about-view--friends {
 
       img {
         margin: 0 auto;
+        transform: scale(1.25);
       }
     }
   }
@@ -420,6 +422,10 @@ section.section.about-view--friends {
       display: flex;
      }
 
+     .values-blurb-container p.values-blurb {
+      max-width: 420px;
+     }
+
     .values-carousel-container {
       overflow: hidden;
 
@@ -462,7 +468,7 @@ section.section.about-view--friends {
           font-size: 18px;
         }
         p {
-          font-size: 13px;
+          font-size: 14px;
         }
       }
     }
@@ -471,22 +477,26 @@ section.section.about-view--friends {
   section.section.about-view--certif {
     min-height: auto;
 
-  .certif-container {
-    justify-content: center;
-    max-width: none;
+    .section-container {
+      padding: 60px 15px;
+    }
 
-    .certif-icon {
-      flex: 0 1 16%;
-      margin-right: 5%;
-      max-width: 130px;
-      margin-bottom: 25px;
+    .certif-container {
+      justify-content: center;
+      max-width: none;
 
-      &:last-of-type {
-        margin-right: 0;
+      .certif-icon {
+        flex: 0 1 16%;
+        margin-right: 5%;
+        max-width: 130px;
+        margin-bottom: 25px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
   }
-}
 
   section.section.about-view--friends {
     .friends-container {
@@ -509,6 +519,10 @@ section.section.about-view--friends {
         flex: 0 1 90%;
         margin-left: auto;
         margin-right: auto;
+
+        &:first-of-type {
+          margin-top: 45px;
+        }
 
         .core-blurb {
           p {
