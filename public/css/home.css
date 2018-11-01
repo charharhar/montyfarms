@@ -93,19 +93,16 @@ section.home-view--about {
 
       .products {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         flex-flow: row wrap;
 
         .product {
           position: relative;
           display: block;
           width: 30%;
-          margin-right: 5%;
+          margin-left: 3%;
+          margin-right: 3%;
           margin-bottom: 20px;
-
-          &:nth-of-type(3n) {
-            margin-right: 0;
-          }
 
           &:hover figure.product-fruit-img {
             transform: translateX(-50%) scale(1.1);
@@ -441,21 +438,8 @@ section.home-view--reachus {
         .products {
 
           .product {
-            width: 35%;
-            margin-right: 10%;
+            width: 40%;
             margin-bottom: 25px;
-
-            &:nth-of-type(3) {
-              margin-right: 10%;
-            }
-
-            &:nth-of-type(2n) {
-              margin-right: 0;
-            }
-
-            &:nth-of-type(5) {
-              margin-right: 0;
-            }
 
             figure.product-cup-img {
               max-height: 140px;
