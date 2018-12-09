@@ -489,8 +489,13 @@ section.products-view--products {
         margin: 0 auto;
 
         .slick-slide {
-          padding: 15px;
+          padding: 10px;
           cursor: pointer;
+        }
+
+        .slick-track {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 
