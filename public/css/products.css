@@ -491,6 +491,13 @@ section.products-view--products {
         .slick-slide {
           padding: 10px;
           cursor: pointer;
+          transition: .3s all ease;
+          opacity: 0.3;
+
+          &:hover,
+          &.slick-current {
+            opacity: 1;
+          }
         }
 
         .slick-track {

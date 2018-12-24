@@ -6,6 +6,7 @@
    $(main).slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: false,
     arrows: true,
     fade: false,
     asNavFor: thumbnail,
@@ -16,6 +17,7 @@
   $(thumbnail).slick({
     slidesToShow: 5,
     slidesToScroll: 1,
+    infinite: false,
     asNavFor: main,
     focusOnSelect: true,
     responsive: [
